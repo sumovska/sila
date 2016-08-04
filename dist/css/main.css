@@ -88,7 +88,7 @@ h2,
 .h2 {
   margin-top: 16px;
   margin-bottom: 16px;
-  font: bold 28px/32px 'Co Text Corp', Arial, sans-serif;
+  font: bold 27px/25px 'Co Text Corp', Arial, sans-serif;
   color: #000;
   text-transform: uppercase;
 }
@@ -354,6 +354,74 @@ button:focus,
   font: bold 8px/10px 'Co Text Corp', Arial, sans-serif;
 }
 /* ==========================================================================
+   STEPS
+   ========================================================================== */
+.steps {
+  padding-top: 30px;
+  padding-bottom: 18px;
+  background: #531b53 url('../img/steps/bg.jpg') center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.steps .heading {
+  margin-top: 0;
+  margin-bottom: 22px;
+  text-align: center;
+  color: #fff;
+}
+.steps .list {
+  margin-bottom: 26px;
+  padding: 0;
+  list-style: none;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: left;
+}
+.steps .list li {
+  min-height: 70px;
+  margin-bottom: 11px;
+  padding-top: 30px;
+  padding-left: 122px;
+  position: relative;
+}
+.steps .list li:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  display: inline;
+  font-weight: bold;
+  color: #fdee00;
+}
+.steps .list li:nth-child(1):before {
+  content: '1.';
+}
+.steps .list li:nth-child(2):before {
+  content: '2.';
+}
+.steps .list li:nth-child(3):before {
+  content: '3.';
+}
+.steps .list li:nth-child(4):before {
+  content: '4.';
+}
+.steps .list li:nth-child(5):before {
+  content: '5.';
+}
+.steps .list .icon {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 38px;
+}
+.steps .text {
+  margin-bottom: 0;
+  font: bold 22px/19px 'Co Text Corp', Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fdee00;
+}
+/* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
 @media (min-width: 750px) {
@@ -464,6 +532,13 @@ button:focus,
     font-size: 12px;
     line-height: 14px;
   }
+  .steps {
+    padding-top: 110px;
+    padding-bottom: 38px;
+  }
+  .steps .heading {
+    margin-bottom: 48px;
+  }
 }
 @media (min-width: 1170px) {
   .wrapper {
@@ -495,6 +570,13 @@ button:focus,
   }
   .testimonials .adr {
     max-width: 80%;
+  }
+  .steps {
+    padding-top: 144px;
+    padding-bottom: 144px;
+  }
+  .steps .heading {
+    margin-bottom: 52px;
   }
 }
 
