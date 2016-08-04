@@ -9,7 +9,7 @@
     color: @color-white;
     text-align: center;
     @media @tablet-sm {
-        padding-top: 110px;
+        padding-top: 38px;
         padding-bottom: 38px;
     }
     @media @desktop-sm {
@@ -37,6 +37,12 @@
         font-size: 11px;
         line-height: 13px;
         text-align: left;
+        @media @tablet-sm {
+          height: 290px;
+          position: relative;
+          font-size: 13px;
+          line-height: 15px;
+        }
 
         li {
             min-height: 70px;
@@ -75,13 +81,29 @@
                     content: '5.';
                 }
             }
+            @media @tablet-sm {
+              padding-left: 0;
+              padding-top: 80px;
+              &:nth-child(1) {
+                position: absolute;
+left: 54px;
+top: 14px;
+              }
+            }
+
         }
+
         .icon {
             width: 70px;
             height: 70px;
             position: absolute;
             top: 0;
             left: 38px;
+            @media @tablet-sm {
+              width: 94px;
+              height: 94px;
+left: 0;
+            }
         }
     }
 

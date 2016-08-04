@@ -533,11 +533,31 @@ button:focus,
     line-height: 14px;
   }
   .steps {
-    padding-top: 110px;
+    padding-top: 38px;
     padding-bottom: 38px;
   }
   .steps .heading {
     margin-bottom: 48px;
+  }
+  .steps .list {
+    height: 290px;
+    position: relative;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .steps .list li {
+    padding-left: 0;
+    padding-top: 80px;
+  }
+  .steps .list li:nth-child(1) {
+    position: absolute;
+    left: 54px;
+    top: 14px;
+  }
+  .steps .list .icon {
+    width: 94px;
+    height: 94px;
+    left: 0;
   }
 }
 @media (min-width: 1170px) {
