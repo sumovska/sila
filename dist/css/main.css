@@ -161,7 +161,7 @@ h6 + p,
    CONTAINERS
    ========================================================================== */
 .wrapper {
-  max-width: 1064px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -466,9 +466,35 @@ button:focus,
   }
 }
 @media (min-width: 1170px) {
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .testimonials {
+    padding-top: 144px;
+    padding-bottom: 144px;
+  }
+  .testimonials .heading {
+    margin-bottom: 52px;
+  }
+  .testimonials .list {
+    margin-bottom: 54px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .testimonials .list .item {
+    min-height: 188px;
+    margin-bottom: 26px;
+    padding: 30px 34px 30px 206px;
+  }
   .testimonials .list .photo {
     width: 136px;
     height: 136px;
+    left: 36px;
+    top: 26px;
+  }
+  .testimonials .adr {
+    max-width: 80%;
   }
 }
 
