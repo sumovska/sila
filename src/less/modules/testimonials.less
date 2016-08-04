@@ -1,0 +1,109 @@
+/* ==========================================================================
+   TESTIMONIALS
+   ========================================================================== */
+.testimonials {
+    padding-top: 32px;
+    padding-bottom: 18px;
+    background: @color-black url('@{images}/testimonials/bg.jpg') center center no-repeat;
+    background-size: cover;
+    color: @color-white;
+    text-align: center;
+    @media @tablet-sm {
+        padding-top: 110px;
+        padding-bottom: 38px;
+    }
+
+    .heading {
+        .h3;
+        margin-top: 0;
+        text-align: center;
+        color: @color-white;
+        @media @tablet-sm {
+            margin-top: 0;
+            margin-bottom: 48px;
+        }
+    }
+
+    .list {
+        margin-bottom: 32px;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: left;
+        @media @tablet-sm {
+            margin-bottom: 70px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        .item {
+            margin-bottom: 10px;
+            padding: 10px;
+            .color-gray(.45);
+            background: @color;
+            position: relative;
+            @media @tablet-sm {
+                min-height: 140px;
+                margin-bottom: 20px;
+                padding: 24px 20px 24px 160px;
+            }
+        }
+
+        .photo {
+            width: 44px;
+            height: 44px;
+            display: block;
+            margin: 0 auto 12px;
+            @media @tablet-sm {
+                width: 104px;
+                height: 104px;
+                margin: 0;
+                position: absolute;
+                left: 30px;
+                top: 18px;
+            }
+            @media @desktop-sm {
+                width: 136px;
+                height: 136px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .button {
+        min-width: 270px;
+        margin-bottom: 52px;
+        padding: 15px;
+        .color-gray(.45);
+        border-radius: 0;
+        background: @color;
+        box-shadow: none;
+        font-size: 17px;
+        line-height: 17px;
+        text-shadow: 0 2px 2px rgba(8, 53, 73, .39);
+
+        &:hover {
+            .color-gray(.85);
+            background: @color;
+        }
+        @media @tablet-sm {
+            min-width: 410px;
+            margin-bottom: 66px;
+            padding: 20px 20px 24px;
+            font-size: 26px;
+            line-height: 26px;
+        }
+    }
+
+    .adr {
+        max-width: 390px;
+        margin: 0 auto;
+        font: bold 8px/10px @font-heading;
+        @media @tablet-sm {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}

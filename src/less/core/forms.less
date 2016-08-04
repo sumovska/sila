@@ -45,23 +45,29 @@ textarea {
 }
 /*** BUTTONS ***/
 [type='submit'], [type='reset'], [type='button'], button, .button {
-    padding: 18px 16px 14px;
-    border: none;
-    border-radius: 4px;
+    padding: 13px 13px 9px;
     display: inline-block;
-    font: bold 38px/38px @font-heading;
-    letter-spacing: .01em;
+    font: bold 18px/18px @font-heading;
     color: @color-white;
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
-    background: @color-orange;
+    background: @color-orange url('@{images}/testimonials/pattern.jpg') 0 0 repeat;
+    border: none;
+    box-shadow: 0 4px 0 0 @color-brown;
+    border-radius: 5px;
+    text-shadow: 0 2px 0 @color-brown;
     transition: background-color @duration, color @duration;
     user-select: none;
     appearance: none;
     cursor: pointer;
     &:hover {
         text-decoration: none;
+    }
+    @media @tablet-sm {
+      padding: 28px 24px 24px;
+      font-size: 35px;
+      line-height: 35px;
     }
 }
 /* ==========================================================================
