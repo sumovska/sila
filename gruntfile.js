@@ -356,7 +356,7 @@ module.exports = function(grunt) {
                     design: {
                         ios: {
                             pictureAspect: 'backgroundAndMargin',
-                            backgroundColor: '#2a3356',
+                            backgroundColor: '#ff9700',
                             margin: '18%',
                             assets: {
                                 ios6AndPriorIcons: false,
@@ -368,7 +368,7 @@ module.exports = function(grunt) {
                         desktopBrowser: {},
                         windows: {
                             pictureAspect: 'whiteSilhouette',
-                            backgroundColor: '#2a3356',
+                            backgroundColor: '#ff9700',
                             onConflict: 'override',
                             assets: {
                                 windows80Ie10Tile: false,
@@ -382,7 +382,7 @@ module.exports = function(grunt) {
                         },
                         androidChrome: {
                             pictureAspect: 'noChange',
-                            themeColor: '#2a3356',
+                            themeColor: '#ff9700',
                             manifest: {
                                 name: 'Prime',
                                 display: 'standalone',
@@ -397,7 +397,7 @@ module.exports = function(grunt) {
                         },
                         safariPinnedTab: {
                             pictureAspect: 'silhouette',
-                            themeColor: '#5bbad5'
+                            themeColor: '#ff9700'
                         }
                     },
                     settings: {

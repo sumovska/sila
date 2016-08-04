@@ -1,0 +1,83 @@
+/* ==========================================================================
+   FORMS RESET
+   ========================================================================== */
+form, fieldset, legend {
+    padding: 0;
+    border: none;
+    margin: 0;
+    display: block;
+}
+/*** FIELDS ***/
+[type='text'], [type='tel'], [type='email'], textarea {
+    width: 100%;
+    padding: 20px 10px 18px;
+    border: 1px solid @color-light;
+    box-shadow: 0 0 1px 0 @color-light;
+    border-radius: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font: 18px/18px @font-heading;
+    color: @color-black;
+    background: transparent;
+    transition: border-color @duration;
+    appearance: none;
+
+    &:focus {
+    }
+
+    .form-group & {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+textarea {
+    max-width: 550px;
+    height: 118px;
+    resize: none;
+    @media @tablet-sm {
+        height: 180px;
+    }
+}
+/* noinspection CssInvalidPseudoSelector */
+::placeholder {
+    color: @color-light;
+    opacity: 1;
+}
+/*** BUTTONS ***/
+[type='submit'], [type='reset'], [type='button'], button, .button {
+    padding: 18px 16px 14px;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    font: bold 38px/38px @font-heading;
+    letter-spacing: .01em;
+    color: @color-white;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    background: @color-orange;
+    transition: background-color @duration, color @duration;
+    user-select: none;
+    appearance: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+    }
+}
+/* ==========================================================================
+   DEFAULT FORM
+   ========================================================================== */
+.form {
+    &-group {
+        margin-bottom: 20px;
+        &:after {
+            .clearfix;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media @tablet-sm {
+            margin-bottom: 30px;
+        }
+    }
+}
