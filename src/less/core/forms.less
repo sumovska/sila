@@ -10,15 +10,15 @@ form, fieldset, legend {
 /*** FIELDS ***/
 [type='text'], [type='tel'], [type='email'], textarea {
     width: 100%;
-    padding: 20px 10px 18px;
-    border: 1px solid @color-light;
-    box-shadow: 0 0 1px 0 @color-light;
+    padding: 10px;
     border-radius: 0;
     display: inline-block;
     vertical-align: middle;
-    font: 18px/18px @font-heading;
+    font: 16px/normal @font-default;
     color: @color-black;
-    background: transparent;
+    background: @color-white;
+    box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, .54), 0 0 0 2px rgba(0,0,0,.34);
+    border: none;
     transition: border-color @duration;
     appearance: none;
 
@@ -40,18 +40,21 @@ textarea {
 }
 /* noinspection CssInvalidPseudoSelector */
 ::placeholder {
-    color: @color-light;
+    color: @color-gray-light;
     opacity: 1;
 }
 /*** BUTTONS ***/
 [type='submit'], [type='reset'], [type='button'], button, .button {
-    padding: 13px 13px 9px;
+  width: 100%;
+  max-width: 350px;
+    padding: 13px 13px 11px;
     display: inline-block;
-    font: bold 18px/18px @font-heading;
+    font: bold 18px/normal @font-heading;
     color: @color-white;
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
+    text-transform: uppercase;
     background: @color-orange url('@{images}/testimonials/pattern.jpg') 0 0 repeat;
     border: none;
     box-shadow: 0 4px 0 0 @color-brown;
@@ -94,12 +97,21 @@ textarea {
             border: 9px solid transparent;
             border-top-color: @color-black;
         }
+        .selectric-hover & {
+            color: @color-black;
+            &:after {
+              border-top-color: @color-black;
+            }
+        }
     }
+
 }
 .selectric-items {
-  box-shadow: inset 0 0 0 2px rgba(0,0,0,.34);
   background: @color-white;
   border: none;
+  ul {
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,.34);
+  }
   li {
     font-size: 16px;
     color: @color-gray-light;
@@ -118,15 +130,12 @@ textarea {
    ========================================================================== */
 .form {
     &-group {
-        margin-bottom: 20px;
+        margin-bottom: 14px;
         &:after {
             .clearfix;
         }
         &:last-child {
             margin-bottom: 0;
-        }
-        @media @tablet-sm {
-            margin-bottom: 30px;
         }
     }
 }

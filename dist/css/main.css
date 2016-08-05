@@ -195,15 +195,15 @@ legend {
 [type='email'],
 textarea {
   width: 100%;
-  padding: 20px 10px 18px;
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 0 1px 0 #e5e5e5;
+  padding: 10px;
   border-radius: 0;
   display: inline-block;
   vertical-align: middle;
-  font: 18px/18px 'Co Text Corp', Arial, sans-serif;
+  font: 16px / normal Arial, sans-serif;
   color: #000;
-  background: transparent;
+  background: #fff;
+  box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, 0.54), 0 0 0 2px rgba(0, 0, 0, 0.34);
+  border: none;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-appearance: none;
@@ -224,19 +224,19 @@ textarea {
 }
 /* noinspection CssInvalidPseudoSelector */
 ::-webkit-input-placeholder {
-  color: #e5e5e5;
+  color: #707070;
   opacity: 1;
 }
 ::-moz-placeholder {
-  color: #e5e5e5;
+  color: #707070;
   opacity: 1;
 }
 :-ms-input-placeholder {
-  color: #e5e5e5;
+  color: #707070;
   opacity: 1;
 }
 ::placeholder {
-  color: #e5e5e5;
+  color: #707070;
   opacity: 1;
 }
 /*** BUTTONS ***/
@@ -245,13 +245,16 @@ textarea {
 [type='button'],
 button,
 .button {
-  padding: 13px 13px 9px;
+  width: 100%;
+  max-width: 350px;
+  padding: 13px 13px 11px;
   display: inline-block;
-  font: bold 18px/18px 'Co Text Corp', Arial, sans-serif;
+  font: bold 18px / normal 'Co Text Corp', Arial, sans-serif;
   color: #fff;
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
+  text-transform: uppercase;
   background: #ff6a00 url('../img/testimonials/pattern.jpg') 0 0 repeat;
   border: none;
   box-shadow: 0 4px 0 0 #8b3c05;
@@ -304,10 +307,18 @@ button:focus,
   border: 9px solid transparent;
   border-top-color: #000;
 }
+.selectric-hover .selectric .button {
+  color: #000;
+}
+.selectric-hover .selectric .button:after {
+  border-top-color: #000;
+}
 .selectric-items {
-  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.34);
   background: #fff;
   border: none;
+}
+.selectric-items ul {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.34);
 }
 .selectric-items li {
   font-size: 16px;
@@ -325,7 +336,7 @@ button:focus,
    DEFAULT FORM
    ========================================================================== */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 .form-group:after {
   display: table;
@@ -520,6 +531,7 @@ button:focus,
   background: url('../img/order/bg.jpg') center center no-repeat;
   background-size: cover;
   color: #fff;
+  overflow: hidden;
 }
 .order .heading {
   margin: 0 0 14px;
@@ -627,8 +639,50 @@ button:focus,
   box-shadow: 0 0 40px 10px rgba(255, 106, 0, 0.74);
 }
 .order .form-order .area {
+  padding-bottom: 32px;
   position: relative;
   z-index: 2;
+}
+.order .form-order input {
+  padding-left: 38px;
+}
+.order .form-order input.tel {
+  background: #fff url('../img/order/icons/tel.png') 12px center no-repeat;
+  background-size: 18px 18px;
+}
+.order .form-order input.name {
+  background: #fff url('../img/order/icons/user.png') 12px center no-repeat;
+  background-size: 18px 18px;
+}
+.order .form-order .selectric-country .label {
+  background: #fff url('../img/order/icons/globe.png') 12px center no-repeat;
+  background-size: 18px 18px;
+}
+.order .form-order .submit {
+  position: relative;
+}
+.order .form-order .submit:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  background: url('../img/order/arrow.png') 0 0 no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: -22px;
+  left: -40px;
+}
+.order .text {
+  margin: 0;
+  font: bold 16px/18px 'Co Text Corp', Arial, sans-serif;
+  text-transform: uppercase;
+  color: #ff6a00;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 /* ==========================================================================
    MEDIA QUERIES
@@ -694,9 +748,6 @@ button:focus,
     padding: 28px 24px 24px;
     font-size: 35px;
     line-height: 35px;
-  }
-  .form-group {
-    margin-bottom: 30px;
   }
   .testimonials {
     padding-top: 110px;

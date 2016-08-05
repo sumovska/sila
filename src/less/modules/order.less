@@ -6,6 +6,7 @@
     background: url('@{images}/order/bg.jpg') center center no-repeat;
     background-size: cover;
     color: @color-white;
+    overflow: hidden;
 
     .heading {
         margin: 0 0 14px;
@@ -103,8 +104,54 @@
         }
 
         .area {
+          padding-bottom: 32px;
             position: relative;
             z-index: 2;
         }
+
+        input {
+          padding-left: 38px;
+          &.tel {
+            background: @color-white url('@{images}/order/icons/tel.png') 12px center no-repeat;
+            background-size: 18px 18px;
+          }
+          &.name {
+            background: @color-white url('@{images}/order/icons/user.png') 12px center no-repeat;
+            background-size: 18px 18px;
+          }
+        }
+
+        .selectric-country {
+          .label {
+            background: @color-white url('@{images}/order/icons/globe.png') 12px center no-repeat;
+            background-size: 18px 18px;
+          }
+        }
+
+        .submit {
+          position: relative;
+          &:before {
+            .pseudo;
+            width: 80px;
+            height: 80px;
+            background: url('@{images}/order/arrow.png') 0 0 no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: -22px;
+            left: -40px;
+          }
+        }
+    }
+
+    .text {
+      margin: 0;
+      font: bold 16px/18px @font-heading;
+      text-transform: uppercase;
+      color: @color-orange;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
     }
 }
