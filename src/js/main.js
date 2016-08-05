@@ -25,6 +25,10 @@ $.extend(true, $.magnificPopup.defaults, {
 /** On document ready */
 $(document).ready(function() {
 
-    
+    /*** Selectric  ***/
+    $('.selectric').selectric({
+        disableOnMobile: false,
+        maxHeight: 170
+    });
 
 });

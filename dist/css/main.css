@@ -280,6 +280,47 @@ button:focus,
 .button:focus {
   text-decoration: none;
 }
+/*** Selectric ***/
+.selectric {
+  background: #fff;
+  border: none;
+}
+.selectric .label {
+  margin-left: 0;
+  padding: 0 36px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #707070;
+  box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, 0.54), 0 0 0 2px rgba(0, 0, 0, 0.34);
+}
+.selectric .button {
+  width: 40px;
+  border-radius: 0;
+  background: #ff6a00;
+  box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, 0.54), 0 0 0 2px rgba(0, 0, 0, 0.34);
+}
+.selectric .button:after {
+  top: 10px;
+  border: 9px solid transparent;
+  border-top-color: #000;
+}
+.selectric-items {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.34);
+  background: #fff;
+  border: none;
+}
+.selectric-items li {
+  font-size: 16px;
+  color: #707070;
+}
+.selectric-items li:hover, .selectric-items li:focus {
+  background: transparent;
+  color: #ff6a00;
+}
+.selectric-items li.selected {
+  color: #fff;
+  background: #ff6a00;
+}
 /* ==========================================================================
    DEFAULT FORM
    ========================================================================== */
