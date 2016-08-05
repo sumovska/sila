@@ -28,7 +28,6 @@ $(document).ready(function() {
     /*** Selectric  ***/
     $('.selectric').selectric({
         disableOnMobile: false,
-        maxHeight: 170
     });
 
 });

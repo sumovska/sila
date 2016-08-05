@@ -100,10 +100,11 @@ textarea {
 
     .button {
         width: 40px;
-        height: 40px;
+        height: auto;
         border-radius: 0;
         background: @color-orange;
         box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, .54), 0 0 0 2px rgba(0,0,0,.34);
+        bottom: 0;
         &:after {
             top: 10px;
             border: 9px solid transparent;
@@ -144,6 +145,14 @@ textarea {
       color: @color-white;
       background: @color-orange;
     }
+  }
+  @media @tablet-sm {
+      li {
+        font-size: 24px;
+        line-height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
   }
 }
 /* ==========================================================================

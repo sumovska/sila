@@ -298,10 +298,11 @@ button:focus,
 }
 .selectric .button {
   width: 40px;
-  height: 40px;
+  height: auto;
   border-radius: 0;
   background: #ff6a00;
   box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, 0.54), 0 0 0 2px rgba(0, 0, 0, 0.34);
+  bottom: 0;
 }
 .selectric .button:after {
   top: 10px;
@@ -645,6 +646,9 @@ button:focus,
   position: relative;
   z-index: 2;
 }
+.order .form-order .form-group {
+  margin-bottom: 26px;
+}
 .order .form-order input {
   padding-left: 38px;
 }
@@ -772,6 +776,12 @@ button:focus,
     top: 22px;
     border: 14px solid transparent;
     border-top-color: #000;
+  }
+  .selectric-items li {
+    font-size: 24px;
+    line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .form-group {
     margin-bottom: 20px;
@@ -1103,6 +1113,93 @@ button:focus,
     margin: 0 auto;
     font-size: 42px;
     line-height: 50px;
+  }
+  .order {
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+  .order .heading {
+    max-width: 80%;
+    margin: 0 auto 32px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 65px;
+    line-height: 60px;
+  }
+  .order .heading .small {
+    font-size: 42px;
+  }
+  .order .counter {
+    margin-bottom: 50px;
+  }
+  .order .counter .title {
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .order .counter .line {
+    max-width: 580px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .order .counter .line .number {
+    font-size: 84px;
+    line-height: 84px;
+  }
+  .order .form-order {
+    min-height: 590px;
+    padding-top: 26px;
+    padding-left: 346px;
+  }
+  .order .form-order .image {
+    width: 320px;
+    top: 16px;
+    left: 5px;
+  }
+  .order .form-order .image img {
+    width: 260px;
+  }
+  .order .form-order input {
+    padding-top: 24px;
+    padding-left: 84px;
+    padding-bottom: 23px;
+    font-size: 32px;
+  }
+  .order .form-order input.tel,
+  .order .form-order input.name {
+    background-size: 40px 40px;
+    background-position: 30px center;
+  }
+  .order .form-order .selectric-country .label {
+    height: 84px;
+    padding-left: 84px;
+    font-size: 32px;
+    line-height: 84px;
+    background-size: 40px 40px;
+    background-position: 30px center;
+  }
+  .order .form-order .selectric-country .button {
+    width: 84px;
+    height: 84px;
+  }
+  .order .form-order .selectric-country .selectric-items li {
+    font-size: 32px;
+    line-height: 60px;
+  }
+  .order .form-order .submit {
+    padding: 28px 24px 22px;
+    font-size: 40px;
+  }
+  .order .form-order .submit:before {
+    width: 366px;
+    height: 366px;
+    bottom: -120px;
+    left: -262px;
+  }
+  .order .text {
+    margin: 0 0 25px 0;
+    font-size: 35px;
+    line-height: 36px;
   }
 }
 
