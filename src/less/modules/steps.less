@@ -31,17 +31,18 @@
     }
 
     .list {
-          margin-bottom: 26px;
+        margin-bottom: 26px;
         padding: 0;
         list-style: none;
         font-size: 11px;
         line-height: 13px;
         text-align: left;
         @media @tablet-sm {
-          height: 290px;
-          position: relative;
-          font-size: 13px;
-          line-height: 15px;
+            height: 290px;
+            margin-bottom: 56px;
+            position: relative;
+            font-size: 13px;
+            line-height: 15px;
         }
 
         li {
@@ -56,6 +57,15 @@
                 font-weight: bold;
                 color: @color-yellow;
             }
+
+            .icon {
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 0;
+                left: 38px;
+            }
+
             &:nth-child(1) {
                 &:before {
                     content: '1.';
@@ -82,35 +92,81 @@
                 }
             }
             @media @tablet-sm {
-              padding-left: 0;
-              padding-top: 80px;
-              &:nth-child(1) {
+                margin-left: 14px;
+                padding-left: 0;
+                padding-top: 90px;
                 position: absolute;
-left: 54px;
-top: 14px;
-              }
-            }
+                &:before {
+                    left: -14px;
+                    position: absolute;
+                }
 
-        }
+                .icon {
+                    width: 92px;
+                    height: 92px;
+                    margin: 0 auto;
+                    left: 0;
+                    right: 0;
+                }
 
-        .icon {
-            width: 70px;
-            height: 70px;
-            position: absolute;
-            top: 0;
-            left: 38px;
-            @media @tablet-sm {
-              width: 94px;
-              height: 94px;
-left: 0;
+                &:nth-child(1) {
+                    width: 136px;
+                    left: 54px;
+                    top: 5px;
+                    .icon {
+                        left: -6px;
+                        right: auto;
+                    }
+                }
+                &:nth-child(2) {
+                    width: 324px;
+                    left: 16px;
+                    bottom: 5px;
+                    .icon {
+                        right: 80px;
+                    }
+                }
+                &:nth-child(3) {
+                    width: 236px;
+                    margin: 0 auto;
+                    right: 20px;
+                    left: 0;
+                    top: 30px;
+                    .icon {
+                        right: 34px;
+                    }
+                }
+                &:nth-child(4) {
+                    width: 168px;
+                    right: 136px;
+                    bottom: 20px;
+                    .icon {
+                        right: 60px;
+                    }
+                }
+                &:nth-child(5) {
+                    width: 136px;
+                    right: 38px;
+                    top: 28px;
+                    .icon {
+                        left: 22px;
+                        right: auto;
+                    }
+                }
             }
         }
     }
 
     .text {
-      margin-bottom: 0;
-      font: bold 22px/19px @font-heading;
-      text-transform: uppercase;
-      color: @color-yellow;
+        margin-bottom: 0;
+        font: bold 22px/19px @font-heading;
+        text-transform: uppercase;
+        color: @color-yellow;
+        @media @tablet-sm {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 28px;
+            line-height: 24px;
+        }
     }
 }

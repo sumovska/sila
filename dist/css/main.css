@@ -393,6 +393,13 @@ button:focus,
   font-weight: bold;
   color: #fdee00;
 }
+.steps .list li .icon {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 38px;
+}
 .steps .list li:nth-child(1):before {
   content: '1.';
 }
@@ -407,13 +414,6 @@ button:focus,
 }
 .steps .list li:nth-child(5):before {
   content: '5.';
-}
-.steps .list .icon {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: 0;
-  left: 38px;
 }
 .steps .text {
   margin-bottom: 0;
@@ -541,23 +541,77 @@ button:focus,
   }
   .steps .list {
     height: 290px;
+    margin-bottom: 56px;
     position: relative;
     font-size: 13px;
     line-height: 15px;
   }
   .steps .list li {
+    margin-left: 14px;
     padding-left: 0;
-    padding-top: 80px;
+    padding-top: 90px;
+    position: absolute;
+  }
+  .steps .list li:before {
+    left: -14px;
+    position: absolute;
+  }
+  .steps .list li .icon {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
   }
   .steps .list li:nth-child(1) {
-    position: absolute;
+    width: 136px;
     left: 54px;
-    top: 14px;
+    top: 5px;
   }
-  .steps .list .icon {
-    width: 94px;
-    height: 94px;
+  .steps .list li:nth-child(1) .icon {
+    left: -6px;
+    right: auto;
+  }
+  .steps .list li:nth-child(2) {
+    width: 324px;
+    left: 16px;
+    bottom: 5px;
+  }
+  .steps .list li:nth-child(2) .icon {
+    right: 80px;
+  }
+  .steps .list li:nth-child(3) {
+    width: 236px;
+    margin: 0 auto;
+    right: 20px;
     left: 0;
+    top: 30px;
+  }
+  .steps .list li:nth-child(3) .icon {
+    right: 34px;
+  }
+  .steps .list li:nth-child(4) {
+    width: 168px;
+    right: 136px;
+    bottom: 20px;
+  }
+  .steps .list li:nth-child(4) .icon {
+    right: 60px;
+  }
+  .steps .list li:nth-child(5) {
+    width: 136px;
+    right: 38px;
+    top: 28px;
+  }
+  .steps .list li:nth-child(5) .icon {
+    left: 22px;
+    right: auto;
+  }
+  .steps .text {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 24px;
   }
 }
 @media (min-width: 1170px) {
