@@ -1118,11 +1118,42 @@ button:focus,
     font-size: 14px;
     line-height: 18px;
   }
+  .features {
+    min-height: 534px;
+  }
+  .features .bg {
+    bottom: -54px;
+  }
   .features .heading {
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 26px;
     line-height: 30px;
+  }
+  .features .heading {
+    max-width: 80%;
+    margin: 0 auto 122px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .features .list {
+    max-width: none;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .features .list li {
+    width: 200px;
+    padding: 0 20px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .features .list li:first-child,
+  .features .list li:nth-child(3) {
+    margin-top: 32px;
+  }
+  .features .list .icon {
+    width: 130px;
+    height: 130px;
   }
 }
 @media (min-width: 1170px) {
