@@ -541,16 +541,30 @@ button:focus,
   }
   .steps .list {
     height: 290px;
-    margin-bottom: 56px;
+    margin: 0 -10px 56px;
     position: relative;
     font-size: 13px;
     line-height: 15px;
+  }
+  .steps .list:before {
+    display: block;
+    content: '\0020';
+    overflow: hidden;
+    background: url('../img/steps/curve.png') 5px 6px no-repeat;
+    background-size: 101% auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
   }
   .steps .list li {
     margin-left: 14px;
     padding-left: 0;
     padding-top: 90px;
     position: absolute;
+    z-index: 2;
   }
   .steps .list li:before {
     left: -14px;
@@ -565,7 +579,7 @@ button:focus,
   }
   .steps .list li:nth-child(1) {
     width: 136px;
-    left: 54px;
+    left: 64px;
     top: 5px;
   }
   .steps .list li:nth-child(1) .icon {
@@ -574,7 +588,7 @@ button:focus,
   }
   .steps .list li:nth-child(2) {
     width: 324px;
-    left: 16px;
+    left: 26px;
     bottom: 5px;
   }
   .steps .list li:nth-child(2) .icon {
@@ -583,7 +597,7 @@ button:focus,
   .steps .list li:nth-child(3) {
     width: 236px;
     margin: 0 auto;
-    right: 20px;
+    right: 30px;
     left: 0;
     top: 30px;
   }
@@ -592,7 +606,7 @@ button:focus,
   }
   .steps .list li:nth-child(4) {
     width: 168px;
-    right: 136px;
+    right: 146px;
     bottom: 20px;
   }
   .steps .list li:nth-child(4) .icon {
@@ -600,7 +614,7 @@ button:focus,
   }
   .steps .list li:nth-child(5) {
     width: 136px;
-    right: 38px;
+    right: 48px;
     top: 28px;
   }
   .steps .list li:nth-child(5) .icon {
@@ -646,11 +660,59 @@ button:focus,
     max-width: 80%;
   }
   .steps {
-    padding-top: 144px;
-    padding-bottom: 144px;
+    padding-top: 26px;
+    padding-bottom: 50px;
   }
   .steps .heading {
-    margin-bottom: 52px;
+    margin-bottom: 10px;
+  }
+  .steps .list {
+    height: 394px;
+    margin: 0 -20px 46px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .steps .list:before {
+    background-size: 99% auto;
+    background-position: 20px 5px;
+    right: -45px;
+  }
+  .steps .list li {
+    margin-left: 20px;
+    padding-top: 122px;
+  }
+  .steps .list li:before {
+    left: -20px;
+  }
+  .steps .list li .icon {
+    width: 125px;
+    height: 125px;
+  }
+  .steps .list li:nth-child(1) {
+    left: 92px;
+  }
+  .steps .list li:nth-child(2) {
+    width: 410px;
+    left: 44px;
+    bottom: 8px;
+  }
+  .steps .list li:nth-child(3) {
+    width: 308px;
+    top: 34px;
+    right: 20px;
+  }
+  .steps .list li:nth-child(4) {
+    width: 210px;
+    right: 182px;
+    bottom: 30px;
+  }
+  .steps .list li:nth-child(5) {
+    width: 180px;
+    right: 24px;
+    top: 33px;
+  }
+  .steps .text {
+    max-width: none;
   }
 }
 

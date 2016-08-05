@@ -13,8 +13,8 @@
         padding-bottom: 38px;
     }
     @media @desktop-sm {
-        padding-top: 144px;
-        padding-bottom: 144px;
+        padding-top: 26px;
+        padding-bottom: 50px;
     }
 
     .heading {
@@ -26,7 +26,7 @@
             margin-bottom: 48px;
         }
         @media @desktop-sm {
-            margin-bottom: 52px;
+            margin-bottom: 10px;
         }
     }
 
@@ -39,10 +39,32 @@
         text-align: left;
         @media @tablet-sm {
             height: 290px;
-            margin-bottom: 56px;
+            margin: 0 -10px 56px;
             position: relative;
             font-size: 13px;
             line-height: 15px;
+            &:before {
+                .pseudo;
+                background: url('@{images}/steps/curve.png') 5px 6px no-repeat;
+                background-size: 101% auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 0;
+            }
+        }
+        @media @desktop-sm {
+            height: 394px;
+            margin: 0 -20px 46px;
+            font-size: 18px;
+            line-height: 22px;
+            &:before {
+                background-size: 99% auto;
+                background-position: 20px 5px;
+                right: -45px;
+            }
         }
 
         li {
@@ -96,6 +118,7 @@
                 padding-left: 0;
                 padding-top: 90px;
                 position: absolute;
+                z-index: 2;
                 &:before {
                     left: -14px;
                     position: absolute;
@@ -111,7 +134,7 @@
 
                 &:nth-child(1) {
                     width: 136px;
-                    left: 54px;
+                    left: 64px;
                     top: 5px;
                     .icon {
                         left: -6px;
@@ -120,7 +143,7 @@
                 }
                 &:nth-child(2) {
                     width: 324px;
-                    left: 16px;
+                    left: 26px;
                     bottom: 5px;
                     .icon {
                         right: 80px;
@@ -129,7 +152,7 @@
                 &:nth-child(3) {
                     width: 236px;
                     margin: 0 auto;
-                    right: 20px;
+                    right: 30px;
                     left: 0;
                     top: 30px;
                     .icon {
@@ -138,7 +161,7 @@
                 }
                 &:nth-child(4) {
                     width: 168px;
-                    right: 136px;
+                    right: 146px;
                     bottom: 20px;
                     .icon {
                         right: 60px;
@@ -146,12 +169,48 @@
                 }
                 &:nth-child(5) {
                     width: 136px;
-                    right: 38px;
+                    right: 48px;
                     top: 28px;
                     .icon {
                         left: 22px;
                         right: auto;
                     }
+                }
+            }
+            @media @desktop-sm {
+                margin-left: 20px;
+                padding-top: 122px;
+                &:before {
+                    left: -20px;
+                }
+
+                .icon {
+                    width: 125px;
+                    height: 125px;
+                }
+
+                &:nth-child(1) {
+                    left: 92px;
+                }
+                &:nth-child(2) {
+                    width: 410px;
+                    left: 44px;
+                    bottom: 8px;
+                }
+                &:nth-child(3) {
+                    width: 308px;
+                    top: 34px;
+                    right: 20px;
+                }
+                &:nth-child(4) {
+                    width: 210px;
+                    right: 182px;
+                    bottom: 30px;
+                }
+                &:nth-child(5) {
+                    width: 180px;
+                    right: 24px;
+                    top: 33px;
                 }
             }
         }
@@ -167,6 +226,9 @@
             margin: 0 auto;
             font-size: 28px;
             line-height: 24px;
+        }
+        @media @desktop-sm {
+            max-width: none;
         }
     }
 }
