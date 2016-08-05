@@ -1,12 +1,12 @@
-# sila
+# Sila Duha
 
 _Responsive markup_
 
 ## Technologies
 
-- Jade/HTML5
+- HTML5
 - LESS/CSS
-- CoffeeScript/JavaScript/jQuery
+- JavaScript/jQuery
 - PostCSS/Autoprefixer
 - Grunt/Bower/npm
 
@@ -15,7 +15,6 @@ _Responsive markup_
 - [normalize.css](https://github.com/necolas/normalize.css/)
 - [Fastclick](https://github.com/ftlabs/fastclick)
 - [jQuery](https://github.com/jquery/jquery)
-- [Slick](https://github.com/kenwheeler/slick/)
 - [Magnific Popup](https://github.com/dimsemenov/Magnific-Popup)
 
 ## Installation

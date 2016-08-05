@@ -330,6 +330,10 @@ button:focus,
   height: 44px;
   display: block;
   margin: 0 auto 12px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .testimonials .list p {
   margin: 0;
@@ -399,6 +403,10 @@ button:focus,
   position: absolute;
   top: 0;
   left: 38px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .steps .list li:nth-child(1):before {
   content: '1.';
