@@ -10,7 +10,15 @@
   font-family: 'Co Text Corp';
   src: url('../fonts/cotextcorp-bold.eot');
   src: local('☺'), url('../fonts/cotextcorp-bold.woff') format('woff'), url('../fonts/cotextcorp-bold.ttf') format('truetype'), url('../fonts/cotextcorp-bold.svg') format('svg');
-  font-weight: normal;
+  font-weight: bold;
+  font-style: normal;
+}
+/*** Helvetica Neue Сondensed ***/
+@font-face {
+  font-family: 'Helvetica Neue Сondensed';
+  src: url('../fonts/helveticaneue-bold-condensed-webfont.eot');
+  src: local('☺'), url('../fonts/helveticaneue-bold-condensed-webfont.woff') format('woff'), url('../fonts/helveticaneue-bold-condensed-webfont.ttf') format('truetype'), url('../fonts/helveticaneue-bold-condensed-webfont.svg') format('svg');
+  font-weight: bold;
   font-style: normal;
 }
 /* ==========================================================================
@@ -433,8 +441,8 @@ button:focus,
    RECOMMEND
    ========================================================================== */
 .recommend {
-  height: 314px;
-  padding: 18px 0;
+  height: 310px;
+  padding: 14px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -462,6 +470,124 @@ button:focus,
 }
 .recommend .heading + p {
   margin-top: 0;
+}
+/* ==========================================================================
+   ORDER
+   ========================================================================== */
+.order {
+  padding: 18px 0;
+  background: url('../img/order/bg.jpg') center center no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.order .heading {
+  margin: 0 0 14px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(8, 53, 73, 0.39);
+  font-size: 25px;
+  line-height: 20px;
+}
+.order .heading .small {
+  font-size: 16px;
+}
+.order .counter {
+  margin-bottom: 18px;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.order .counter .title {
+  margin: 0 0 18px;
+  font: bold 29px/33px 'Co Text Corp', Arial, sans-serif;
+  text-shadow: 2px 2px 2px rgba(8, 53, 73, 0.39);
+  text-transform: uppercase;
+  text-align: center;
+}
+.order .counter .line {
+  margin: 0 -9px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font: bold 10px/10px 'Helvetica Neue Сondensed', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+.order .counter .line:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.order .counter .line li {
+  width: 25%;
+  padding: 0 9px;
+  float: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.order .counter .line li:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.order .counter .line .number {
+  margin: 4px 0 0 0;
+  padding: 3px;
+  display: block;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 47px;
+  line-height: 47px;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  position: relative;
+}
+.order .counter .line .text {
+  width: 100%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+.order .form-order {
+  min-height: 400px;
+  padding-top: 180px;
+  position: relative;
+}
+.order .form-order .image {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+}
+.order .form-order .image img {
+  width: 164px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 40px 10px rgba(255, 106, 0, 0.74);
+}
+.order .form-order .area {
+  position: relative;
+  z-index: 2;
 }
 /* ==========================================================================
    MEDIA QUERIES
@@ -779,7 +905,7 @@ button:focus,
     padding-bottom: 82px;
   }
   .recommend .heading {
-    margin: 0;
+    margin: 0 auto;
     font-size: 42px;
     line-height: 50px;
   }
