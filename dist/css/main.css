@@ -709,7 +709,7 @@ button:focus,
    ========================================================================== */
 .features {
   min-height: 470px;
-  padding: 18px 0;
+  padding: 14px 0;
   background: #531b53;
   color: #fff;
   position: relative;
@@ -718,13 +718,13 @@ button:focus,
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: -20px;
-  bottom: -20px;
+  top: -3%;
+  bottom: -3%;
   right: 0;
   z-index: 0;
-  -webkit-transform: skewY(-8deg);
-      -ms-transform: skewY(-8deg);
-          transform: skewY(-8deg);
+  -webkit-transform: skewY(-6.4deg);
+      -ms-transform: skewY(-6.4deg);
+          transform: skewY(-6.4deg);
 }
 .features .bg:before {
   display: block;
@@ -732,12 +732,12 @@ button:focus,
   overflow: hidden;
   background: url('../img/features/bg.jpg') center 0 no-repeat;
   background-size: cover;
-  -webkit-transform: skewY(8deg);
-      -ms-transform: skewY(8deg);
-          transform: skewY(8deg);
+  -webkit-transform: skewY(6.4deg);
+      -ms-transform: skewY(6.4deg);
+          transform: skewY(6.4deg);
   position: absolute;
-  top: -30px;
-  bottom: -30px;
+  bottom: -5%;
+  top: -5%;
   left: 0;
   right: 0;
 }
@@ -1122,7 +1122,18 @@ button:focus,
     min-height: 534px;
   }
   .features .bg {
-    bottom: -54px;
+    top: -16%;
+    bottom: -10%;
+    -webkit-transform: skewY(-7.4deg);
+    -ms-transform: skewY(-7.4deg);
+    transform: skewY(-7.4deg);
+  }
+  .features .bg:before {
+    -webkit-transform: skewY(7.4deg);
+    -ms-transform: skewY(7.4deg);
+    transform: skewY(7.4deg);
+    bottom: -20%;
+    top: -20%;
   }
   .features .heading {
     margin-top: 30px;
@@ -1340,6 +1351,37 @@ button:focus,
     margin: 0 0 25px 0;
     font-size: 35px;
     line-height: 36px;
+  }
+  .features {
+    min-height: 510px;
+  }
+  .features .bg {
+    top: -17%;
+    bottom: -16%;
+  }
+  .features .bg:before {
+    bottom: -20%;
+    top: -20%;
+  }
+  .features .heading {
+    max-width: 60%;
+    margin-bottom: 80px;
+  }
+  .features .list {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .features .list li {
+    width: 280px;
+  }
+  .features .list li:first-child,
+  .features .list li:nth-child(3) {
+    margin-top: 46px;
+  }
+  .features .list .icon {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 8px;
   }
 }
 
