@@ -112,7 +112,7 @@ h5,
 .h5 {
   margin-top: 16px;
   margin-bottom: 16px;
-  font: bold 18px/22px 'Co Text Corp', Arial, sans-serif;
+  font: bold 17px/19px 'Co Text Corp', Arial, sans-serif;
   color: #000;
   text-transform: uppercase;
 }
@@ -422,6 +422,40 @@ button:focus,
   color: #fdee00;
 }
 /* ==========================================================================
+   RECOMMEND
+   ========================================================================== */
+.recommend {
+  height: 314px;
+  padding: 18px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url('../img/recommend/bg.jpg') center 0 no-repeat;
+  background-size: cover;
+}
+.recommend .heading {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font: bold 17px/19px 'Co Text Corp', Arial, sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+.recommend .heading + p {
+  margin-top: 0;
+}
+/* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
 @media (min-width: 750px) {
@@ -627,6 +661,23 @@ button:focus,
     font-size: 28px;
     line-height: 24px;
   }
+  .recommend {
+    height: 704px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .recommend .heading {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .recommend .heading {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 @media (min-width: 1170px) {
   .wrapper {
@@ -713,6 +764,16 @@ button:focus,
   }
   .steps .text {
     max-width: none;
+  }
+  .recommend {
+    height: 1086px;
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+  .recommend .heading {
+    margin: 0;
+    font-size: 42px;
+    line-height: 50px;
   }
 }
 
