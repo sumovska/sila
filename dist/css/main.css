@@ -290,7 +290,7 @@ button:focus,
 }
 .selectric .label {
   margin-left: 0;
-  padding: 0 36px;
+  padding: 0 16px 0 36px;
   font-size: 16px;
   line-height: 40px;
   color: #707070;
@@ -298,6 +298,7 @@ button:focus,
 }
 .selectric .button {
   width: 40px;
+  height: 40px;
   border-radius: 0;
   background: #ff6a00;
   box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, 0.54), 0 0 0 2px rgba(0, 0, 0, 0.34);
@@ -545,6 +546,7 @@ button:focus,
 }
 .order .heading .small {
   font-size: 16px;
+  display: block;
 }
 .order .counter {
   margin-bottom: 18px;
@@ -737,6 +739,14 @@ button:focus,
     font-size: 18px;
     line-height: 22px;
   }
+  [type='text'],
+  [type='tel'],
+  [type='email'],
+  textarea {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 24px;
+  }
   textarea {
     height: 180px;
   }
@@ -745,9 +755,26 @@ button:focus,
   [type='button'],
   button,
   .button {
-    padding: 28px 24px 24px;
-    font-size: 35px;
-    line-height: 35px;
+    max-width: none;
+    padding: 20px 24px 16px;
+    font-size: 29px;
+  }
+  .selectric .label {
+    height: 60px;
+    font-size: 24px;
+    line-height: 60px;
+  }
+  .selectric .button {
+    width: 60px;
+    height: 60px;
+  }
+  .selectric .button:after {
+    top: 22px;
+    border: 14px solid transparent;
+    border-top-color: #000;
+  }
+  .form-group {
+    margin-bottom: 20px;
   }
   .testimonials {
     padding-top: 110px;
@@ -903,6 +930,82 @@ button:focus,
     margin: 0 auto;
     font-size: 36px;
     line-height: 42px;
+  }
+  .order {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .order .heading {
+    max-width: 76%;
+    margin: 0 auto 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 48px;
+    line-height: 44px;
+  }
+  .order .heading .small {
+    font-size: 31px;
+  }
+  .order .counter {
+    margin-bottom: 36px;
+  }
+  .order .counter .title {
+    margin-bottom: 24px;
+  }
+  .order .counter .line {
+    max-width: 434px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .order .counter .line li {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .order .counter .line .number {
+    padding: 7px 3px 16px;
+    font-size: 64px;
+    line-height: 52px;
+  }
+  .order .form-order {
+    padding-top: 20px;
+    padding-left: 284px;
+  }
+  .order .form-order .image {
+    width: 250px;
+    top: 10px;
+    left: 24px;
+  }
+  .order .form-order .image img {
+    width: 188px;
+  }
+  .order .form-order input {
+    padding-left: 60px;
+  }
+  .order .form-order input.tel,
+  .order .form-order input.name {
+    background-size: 30px 30px;
+    background-position: 20px center;
+  }
+  .order .form-order .selectric-country .label {
+    padding-left: 60px;
+    background-size: 30px 30px;
+    background-position: 20px center;
+  }
+  .order .form-order .submit:before {
+    width: 280px;
+    height: 280px;
+    bottom: -88px;
+    left: -200px;
+  }
+  .order .text {
+    margin: -8px 0 16px 0;
+    font-size: 25px;
+    line-height: 30px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
   }
 }
 @media (min-width: 1170px) {

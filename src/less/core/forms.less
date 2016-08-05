@@ -29,6 +29,12 @@ form, fieldset, legend {
         width: 100%;
         max-width: 100%;
     }
+
+    @media @tablet-sm {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      font-size: 24px;
+    }
 }
 textarea {
     max-width: 550px;
@@ -68,9 +74,9 @@ textarea {
         text-decoration: none;
     }
     @media @tablet-sm {
-        padding: 28px 24px 24px;
-        font-size: 35px;
-        line-height: 35px;
+      max-width: none;
+        padding: 20px 24px 16px;
+        font-size: 29px;
     }
 }
 /*** Selectric ***/
@@ -80,15 +86,21 @@ textarea {
 
     .label {
         margin-left: 0;
-        padding: 0 36px;
+        padding: 0 16px 0 36px;
         font-size: 16px;
         line-height: 40px;
         color: @color-gray-light;
         box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, .54), 0 0 0 2px rgba(0,0,0,.34);
+        @media @tablet-sm {
+          height: 60px;
+          font-size: 24px;
+          line-height: 60px;
+        }
     }
 
     .button {
         width: 40px;
+        height: 40px;
         border-radius: 0;
         background: @color-orange;
         box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, .54), 0 0 0 2px rgba(0,0,0,.34);
@@ -102,6 +114,15 @@ textarea {
             &:after {
               border-top-color: @color-black;
             }
+        }
+        @media @tablet-sm {
+          width: 60px;
+          height: 60px;
+          &:after {
+            top: 22px;
+            border: 14px solid transparent;
+            border-top-color: @color-black;
+          }
         }
     }
 
@@ -136,6 +157,9 @@ textarea {
         }
         &:last-child {
             margin-bottom: 0;
+        }
+        @media @tablet-sm {
+          margin-bottom: 20px;
         }
     }
 }
