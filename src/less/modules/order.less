@@ -157,13 +157,13 @@
         padding-top: 180px;
         position: relative;
         @media @tablet-sm {
-          min-height: 428px;
+            min-height: 428px;
             padding-top: 20px;
             padding-left: 270px;
             padding-right: 14px;
         }
         @media @desktop-sm {
-          min-height: 590px;
+            min-height: 590px;
             padding-top: 26px;
             padding-left: 346px;
         }
@@ -173,19 +173,36 @@
             top: 10px;
             left: 0;
             right: 0;
+            &:before {
+                .pseudo;
+                width: 154px;
+                margin: 0 auto;
+                .color-orange(.74);
+                box-shadow: 0 0 40px 10px @color;
+                position: absolute;
+                top: 10px;
+                bottom: 10px;
+                left: 0;
+                right: 0;
+                z-index: 0;
+            }
+
             img {
                 width: 164px;
                 max-width: 100%;
                 height: auto;
                 margin: 0 auto;
                 display: block;
-                .color-orange(.74);
-                box-shadow: 0 0 40px 10px @color;
+                position: relative;
+                z-index: 1;
             }
             @media @tablet-sm {
                 width: 250px;
                 top: 10px;
                 left: 10px;
+                &:before {
+                    width: 178px;
+                }
                 img {
                     width: 188px;
                 }
@@ -194,6 +211,9 @@
                 width: 320px;
                 top: 16px;
                 left: 5px;
+                &:before {
+                    width: 250px;
+                }
                 img {
                     width: 260px;
                 }
@@ -208,7 +228,7 @@
 
         .form-group {
             @media @desktop-sm {
-              margin-bottom: 26px;
+                margin-bottom: 26px;
             }
         }
 
@@ -252,7 +272,6 @@
                     background-size: 30px 30px;
                     background-position: 20px center;
                 }
-
             }
             @media @desktop-sm {
                 .label {
@@ -269,15 +288,15 @@
                 }
                 .selectric-items {
                     li {
-                      font-size: 32px;
-                      line-height: 60px;
+                        font-size: 32px;
+                        line-height: 60px;
                     }
                 }
             }
         }
 
         .submit {
-          width: 100%;
+            width: 100%;
             position: relative;
             &:before {
                 .pseudo;
