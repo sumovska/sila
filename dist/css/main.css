@@ -537,7 +537,8 @@ button:focus,
   overflow: hidden;
 }
 .order .heading {
-  margin: 0 0 14px;
+  max-width: 450px;
+  margin: 0 auto 14px;
   padding: 6px 10px;
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
@@ -551,7 +552,8 @@ button:focus,
   display: block;
 }
 .order .counter {
-  margin-bottom: 18px;
+  max-width: 434px;
+  margin: 0 auto 18px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -624,7 +626,9 @@ button:focus,
           flex-basis: 100%;
 }
 .order .form-order {
+  max-width: 450px;
   min-height: 400px;
+  margin: 0 auto;
   padding-top: 180px;
   position: relative;
 }
@@ -1069,7 +1073,6 @@ button:focus,
     margin-bottom: 24px;
   }
   .order .counter .line {
-    max-width: 434px;
     margin: 0 auto;
     font-size: 14px;
     line-height: 14px;
@@ -1084,6 +1087,7 @@ button:focus,
     line-height: 52px;
   }
   .order .form-order {
+    max-width: 800px;
     min-height: 428px;
     padding-top: 20px;
     padding-left: 270px;
@@ -1296,6 +1300,7 @@ button:focus,
     font-size: 42px;
   }
   .order .counter {
+    max-width: 580px;
     margin-bottom: 50px;
   }
   .order .counter .title {
@@ -1304,7 +1309,6 @@ button:focus,
     line-height: 40px;
   }
   .order .counter .line {
-    max-width: 580px;
     font-size: 16px;
     line-height: 16px;
   }
@@ -1313,6 +1317,7 @@ button:focus,
     line-height: 84px;
   }
   .order .form-order {
+    max-width: 1000px;
     min-height: 590px;
     padding-top: 26px;
     padding-left: 346px;

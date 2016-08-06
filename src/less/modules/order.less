@@ -16,7 +16,8 @@
     }
 
     .heading {
-        margin: 0 0 14px;
+        max-width: 450px;
+        margin: 0 auto 14px;
         padding: 6px 10px;
         .color-black(.55);
         background: @color;
@@ -57,13 +58,15 @@
     }
 
     .counter {
-        margin-bottom: 18px;
+        max-width: 434px;
+        margin: 0 auto 18px;
         cursor: default;
         user-select: none;
         @media @tablet-sm {
             margin-bottom: 36px;
         }
         @media @desktop-sm {
+            max-width: 580px;
             margin-bottom: 50px;
         }
 
@@ -94,13 +97,11 @@
                 .clearfix;
             }
             @media @tablet-sm {
-                max-width: 434px;
                 margin: 0 auto;
                 font-size: 14px;
                 line-height: 14px;
             }
             @media @desktop-sm {
-                max-width: 580px;
                 font-size: 16px;
                 line-height: 16px;
             }
@@ -153,16 +154,20 @@
     }
 
     .form-order {
+        max-width: 450px;
         min-height: 400px;
+        margin: 0 auto;
         padding-top: 180px;
         position: relative;
         @media @tablet-sm {
+            max-width: 800px;
             min-height: 428px;
             padding-top: 20px;
             padding-left: 270px;
             padding-right: 14px;
         }
         @media @desktop-sm {
+            max-width: 1000px;
             min-height: 590px;
             padding-top: 26px;
             padding-left: 346px;
