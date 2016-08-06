@@ -1320,6 +1320,9 @@ button:focus,
     width: 130px;
     height: 130px;
   }
+  .components {
+    padding-bottom: 28px;
+  }
   .components .heading {
     max-width: 80%;
     margin-bottom: 30px;
@@ -1328,7 +1331,7 @@ button:focus,
   }
   .components .bg {
     top: -16%;
-    bottom: -10%;
+    bottom: -13%;
     -webkit-transform: skewY(-7.4deg);
     -ms-transform: skewY(-7.4deg);
     transform: skewY(-7.4deg);
@@ -1338,11 +1341,18 @@ button:focus,
     margin-bottom: -16px;
   }
   .components .list {
-    width: 620px;
-    height: 620px;
+    width: 600px;
+    height: 600px;
     margin: 0 auto;
-    font-size: 25px;
-    line-height: 32px;
+  }
+  .components .list:before {
+    width: auto;
+    height: auto;
+    margin: auto auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   .components .list .image {
     width: 100px;
@@ -1353,6 +1363,38 @@ button:focus,
     bottom: 0;
     left: 0;
     right: 0;
+  }
+  .components .list ul {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .components .list li {
+    width: 180px;
+  }
+  .components .list li:nth-child(1) {
+    top: 50px;
+    left: -58px;
+  }
+  .components .list li:nth-child(2) {
+    top: 50px;
+    right: -66px;
+  }
+  .components .list li:nth-child(3) {
+    top: 380px;
+    left: -54px;
+  }
+  .components .list li:nth-child(4) {
+    top: 390px;
+    right: -60px;
+  }
+  .components .list .pic {
+    width: 160px;
+    height: 160px;
+  }
+  .components .list .pic img {
+    width: 226px;
+    height: 226px;
+    margin: -113px 0 0 -113px;
   }
 }
 @media (min-width: 1170px) {

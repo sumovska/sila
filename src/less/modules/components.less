@@ -8,6 +8,9 @@
     position: relative;
     background: @color-blue-light;
     color: @color-white;
+    @media @tablet-sm {
+      padding-bottom: 28px;
+    }
 
     .heading {
         max-width: 70%;
@@ -39,7 +42,7 @@
 
         @media @tablet-sm {
             top: -16%;
-            bottom: -10%;
+            bottom: -13%;
             transform: skewY(-7.4deg);
         }
     }
@@ -74,11 +77,18 @@
             left: 50%;
         }
         @media @tablet-sm {
-            width: 620px;
-            height: 620px;
+            width: 600px;
+            height: 600px;
             margin: 0 auto;
-            font-size: 25px;
-            line-height: 32px;
+            &:before {
+                width: auto;
+                height: auto;
+                margin: auto auto;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
         }
 
         .image {
@@ -125,6 +135,10 @@
             list-style: none;
             font: bold 18px/22px @font-heading;
             text-align: center;
+            @media @tablet-sm {
+                font-size: 25px;
+                line-height: 32px;
+            }
         }
 
         li {
@@ -146,6 +160,25 @@
                 top: 480px;
                 right: -6px;
             }
+            @media @tablet-sm {
+                width: 180px;
+                &:nth-child(1) {
+                    top: 50px;
+                    left: -58px;
+                }
+                &:nth-child(2) {
+                    top: 50px;
+                    right: -66px;
+                }
+                &:nth-child(3) {
+                    top: 380px;
+                    left: -54px;
+                }
+                &:nth-child(4) {
+                    top: 390px;
+                    right: -60px;
+                }
+            }
         }
 
         .pic {
@@ -164,6 +197,15 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
+            }
+            @media @tablet-sm {
+                width: 160px;
+                height: 160px;
+                img {
+                    width: 226px;
+                    height: 226px;
+                    margin: -113px 0 0 -113px;
+                }
             }
         }
     }
