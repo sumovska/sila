@@ -812,7 +812,7 @@ button:focus,
 }
 .components .heading {
   max-width: 70%;
-  margin: 0 auto 114px;
+  margin: 0 auto 12px;
   font-size: 21px;
   line-height: 26px;
   text-transform: none;
@@ -834,7 +834,17 @@ button:focus,
       -ms-transform: skewY(-6.4deg);
           transform: skewY(-6.4deg);
 }
-.components .bg:before {
+.components .wrapper {
+  margin: -56px auto -44px;
+  position: relative;
+  z-index: 1;
+}
+.components .list {
+  height: 656px;
+  margin: 0;
+  position: relative;
+}
+.components .list:before {
   display: block;
   content: '\0020';
   overflow: hidden;
@@ -845,26 +855,21 @@ button:focus,
   background-size: 64% auto;
   border-radius: 50%;
   border: 16px solid #2087a4;
-  -webkit-transform: skewY(6.4deg);
-      -ms-transform: skewY(6.4deg);
-          transform: skewY(6.4deg);
   position: absolute;
-  top: 180px;
+  top: 0;
   left: 50%;
 }
-.components .wrapper {
-  margin: -56px auto -44px;
-  position: relative;
-  z-index: 1;
-}
-.components .image {
+.components .list .image {
   width: 72px;
   height: auto;
   margin: 0 auto;
   display: block;
-  position: relative;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
 }
-.components .image:before {
+.components .list .image:before {
   display: block;
   content: '\0020';
   overflow: hidden;
@@ -876,44 +881,37 @@ button:focus,
   right: 5px;
   z-index: 0;
 }
-.components .image img {
+.components .list .image img {
   width: 100%;
   height: auto;
   position: relative;
   z-index: 1;
 }
-.components .list {
-  height: 360px;
-  margin: 45px 0 0;
+.components .list ul {
+  margin: 0;
   padding: 0;
   list-style: none;
   font: bold 18px/22px 'Co Text Corp', Arial, sans-serif;
   text-align: center;
-  position: relative;
-}
-.components .list:after {
-  display: table;
-  content: '\0020';
-  clear: both;
 }
 .components .list li {
   width: 124px;
   position: absolute;
 }
 .components .list li:nth-child(1) {
-  top: 0;
+  top: 296px;
   left: 10px;
 }
 .components .list li:nth-child(2) {
-  top: 0;
+  top: 296px;
   right: 0;
 }
 .components .list li:nth-child(3) {
-  top: 184px;
+  top: 480px;
   left: 16px;
 }
 .components .list li:nth-child(4) {
-  top: 184px;
+  top: 480px;
   right: -6px;
 }
 .components .list .pic {
@@ -1322,6 +1320,12 @@ button:focus,
     width: 130px;
     height: 130px;
   }
+  .components .heading {
+    max-width: 80%;
+    margin-bottom: 30px;
+    font-size: 26px;
+    line-height: 30px;
+  }
   .components .bg {
     top: -16%;
     bottom: -10%;
@@ -1329,12 +1333,26 @@ button:focus,
     -ms-transform: skewY(-7.4deg);
     transform: skewY(-7.4deg);
   }
-  .components .bg:before {
-    -webkit-transform: skewY(7.4deg);
-    -ms-transform: skewY(7.4deg);
-    transform: skewY(7.4deg);
-    bottom: -20%;
-    top: -20%;
+  .components .wrapper {
+    margin-top: -46px;
+    margin-bottom: -16px;
+  }
+  .components .list {
+    width: 620px;
+    height: 620px;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .components .list .image {
+    width: 100px;
+    height: 210px;
+    margin: auto auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 @media (min-width: 1170px) {
@@ -1556,14 +1574,6 @@ button:focus,
     width: 180px;
     height: 180px;
     margin-bottom: 8px;
-  }
-  .components .bg {
-    top: -17%;
-    bottom: -16%;
-  }
-  .components .bg:before {
-    bottom: -20%;
-    top: -20%;
   }
 }
 
