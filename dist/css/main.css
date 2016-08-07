@@ -968,9 +968,10 @@ button:focus,
    COMPONENTS
    ========================================================================== */
 .components {
-  padding: 90px 0 90px;
-  position: relative;
+  padding: 90px 0 60px;
   color: #fff;
+  position: relative;
+  z-index: 2;
 }
 .components .heading {
   margin-top: 16px;
@@ -992,8 +993,8 @@ button:focus,
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: -22px;
-  bottom: -22px;
+  top: -50px;
+  bottom: -50px;
   right: 0;
   z-index: 0;
   -webkit-transform: skewY(-6.4deg);
@@ -1156,6 +1157,84 @@ button:focus,
 }
 .components .list li:nth-child(4) .pic img {
   margin: -71px 0 0 -95px;
+}
+/* ==========================================================================
+   REASONS
+   ========================================================================== */
+.reasons {
+  padding: 106px 0 30px;
+  background: #0faf19 url('../img/reasons/bg.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+.reasons .wrapper {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.reasons .heading {
+  max-width: 320px;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+}
+.reasons .list {
+  min-height: 350px;
+  padding: 95px 0 0 0;
+  background: url('../img/reasons/man.png') center 0 no-repeat;
+  background-size: 290px auto;
+  margin: 0;
+  position: relative;
+  list-style: none;
+  color: #045c1c;
+  font-size: 11px;
+  line-height: 12px;
+}
+.reasons .list li {
+  margin-bottom: 2px;
+  margin-right: -20px;
+  padding: 16px 30px 10px 46px;
+  position: relative;
+}
+.reasons .list li:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 21px;
+  top: 14px;
+}
+.reasons .list li:last-child {
+  margin-bottom: 0;
+}
+.reasons .list li:nth-child(odd) {
+  background: rgba(67, 191, 73, 0.47);
+}
+.reasons .list li:nth-child(even) {
+  background: rgba(169, 247, 172, 0.47);
+}
+.reasons .form-order {
+  margin-top: 40px;
+}
+.reasons .form-order .title {
+  margin-bottom: 28px;
+  font: bold 18px/21px 'Co Text Corp', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+.reasons .form-order .form-group {
+  margin-bottom: 8px;
+}
+.reasons .form-order .input-name,
+.reasons .form-order .input-phone {
+  padding: 13px 10px 10px 47px;
+  background-size: 30px auto;
+  font-size: 19px;
 }
 /* ==========================================================================
    MEDIA QUERIES
@@ -1724,6 +1803,57 @@ button:focus,
   }
   .components .list li:nth-child(4) .pic img {
     margin: -96px 0 0 -132px;
+  }
+  .reasons .heading {
+    max-width: 530px;
+    margin-bottom: 43px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .reasons .list {
+    min-height: 415px;
+    padding: 25px 0 0 336px;
+    background-size: 376px auto;
+    background-position: 4px 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .reasons .list li {
+    margin-bottom: 3px;
+    padding: 21px 30px 14px 63px;
+  }
+  .reasons .list li:nth-child(odd) {
+    background: rgba(169, 247, 172, 0.87);
+  }
+  .reasons .list li:before {
+    width: 18px;
+    height: 18px;
+    top: 18px;
+    left: 30px;
+  }
+  .reasons .form-order {
+    margin-top: 34px;
+    margin-bottom: -86px;
+  }
+  .reasons .form-order .title {
+    max-width: 360px;
+    margin: 0 auto 20px;
+    font-size: 21px;
+    line-height: 24px;
+  }
+  .reasons .form-order .form-group {
+    width: 360px;
+    margin: 0 auto 16px;
+    float: none;
+  }
+  .reasons .form-order .form-submit {
+    width: 100%;
+    margin-top: 26px;
+  }
+  .reasons .form-order .form-submit .button {
+    width: 566px;
+    padding: 23px 22px 22px;
+    font-size: 36px;
   }
 }
 @media (min-width: 1170px) {
