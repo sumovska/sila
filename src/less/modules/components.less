@@ -7,12 +7,12 @@
     background: @color-blue-light;
     color: @color-white;
     @media @tablet-sm {
-          padding-top: 170px;
-      padding-bottom: 60px;
+        padding-top: 170px;
+        padding-bottom: 60px;
     }
 
     .heading {
-      .h4;
+        .h4;
         max-width: 60%;
         margin: 0 auto 14px;
         text-transform: none;
@@ -24,8 +24,8 @@
             margin-bottom: 32px;
         }
         @media @desktop-sm {
-          max-width: 70%;
-          margin-bottom: 40px;
+            max-width: 70%;
+            margin-bottom: 40px;
         }
     }
 
@@ -60,7 +60,7 @@
 
 
     .list {
-      max-width: 300px;
+        max-width: 300px;
         height: 656px;
         margin: 0 auto;
         position: relative;
@@ -96,8 +96,8 @@
             }
         }
         @media @desktop-sm {
-          width: 736px;
-          height: 736px;
+            width: 736px;
+            height: 736px;
         }
 
         .image {
@@ -125,6 +125,7 @@
                 height: auto;
                 position: relative;
                 z-index: 1;
+                user-select: none;
             }
             @media @tablet-sm {
                 width: 100px;
@@ -136,13 +137,13 @@
                 left: 0;
                 right: 0;
                 &:before {
-                      box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.54);
+                    box-shadow: 0 0 30px 10px rgba(255, 255, 255, .54);
                 }
             }
             @media @desktop-sm {
-              width: 120px;
-              height: 252px;
-              bottom: 30px;
+                width: 120px;
+                height: 252px;
+                bottom: 30px;
             }
         }
 
@@ -185,44 +186,44 @@
             @media @tablet-sm {
                 width: 180px;
                 &:nth-child(1) {
-                  top: 46px;
-                  left: -54px;
+                    top: 46px;
+                    left: -54px;
                 }
                 &:nth-child(2) {
-                  top: 46px;
-                  right: -66px;
+                    top: 46px;
+                    right: -66px;
                 }
                 &:nth-child(3) {
-                  top: 380px;
-                  left: -54px;
+                    top: 380px;
+                    left: -54px;
                 }
                 &:nth-child(4) {
-                  top: 380px;
-                  right: -70px;
+                    top: 380px;
+                    right: -70px;
                 }
             }
             @media @desktop-sm {
                 width: 220px;
                 &:nth-child(1) {
-                  top: 58px;
-                  left: -64px;
-                  .pic {
-                    img {
-                          margin: -144px 0 0 -124px;
+                    top: 58px;
+                    left: -64px;
+                    .pic {
+                        img {
+                            margin: -144px 0 0 -124px;
+                        }
                     }
-                  }
                 }
                 &:nth-child(2) {
-                  top: 58px;
-                  right: -84px;
+                    top: 58px;
+                    right: -84px;
                 }
                 &:nth-child(3) {
-                  top: 466px;
-                  left: -64px;
+                    top: 466px;
+                    left: -64px;
                 }
                 &:nth-child(4) {
-                  top: 470px;
-                  right: -84px;
+                    top: 470px;
+                    right: -84px;
                 }
             }
         }
@@ -244,6 +245,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                user-select: none;
             }
             @media @tablet-sm {
                 width: 160px;

@@ -244,8 +244,10 @@ textarea {
 button,
 .button {
   width: 100%;
-  max-width: 350px;
-  padding: 13px 13px 11px;
+  max-width: 286px;
+  padding: 13px 12px 11px;
+  border: none;
+  border-radius: 5px;
   display: inline-block;
   font: bold 18px / normal 'Co Text Corp', Arial, sans-serif;
   color: #fff;
@@ -254,12 +256,10 @@ button,
   white-space: nowrap;
   text-transform: uppercase;
   background: #ff6a00 url('../img/testimonials/pattern.jpg') 0 0 repeat;
-  border: none;
-  box-shadow: 0 4px 0 0 #8b3c05;
-  border-radius: 5px;
+  box-shadow: 0 3px 0 #8b3c05;
   text-shadow: 0 2px 0 #8b3c05;
-  -webkit-transition: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -268,6 +268,27 @@ button,
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
+}
+[type='submit'] .button-green,
+[type='reset'] .button-green,
+[type='button'] .button-green,
+button .button-green,
+.button .button-green {
+  text-shadow: 0 2px 0 #088700;
+  background: #0faf19 url('../img/action/button.png') 0 0 repeat;
+  box-shadow: 0 3px 0 #088700;
+}
+[type='submit'] .button-green:hover,
+[type='reset'] .button-green:hover,
+[type='button'] .button-green:hover,
+button .button-green:hover,
+.button .button-green:hover,
+[type='submit'] .button-green:focus,
+[type='reset'] .button-green:focus,
+[type='button'] .button-green:focus,
+button .button-green:focus,
+.button .button-green:focus {
+  box-shadow: 0 3px 0 #088700, inset 0 0 4px 4px #65c81d;
 }
 [type='submit']:hover,
 [type='reset']:hover,
@@ -280,6 +301,7 @@ button:hover,
 button:focus,
 .button:focus {
   text-decoration: none;
+  box-shadow: 0 3px 0 #8b3c05, inset 0 0 4px 4px #ff9a00;
 }
 .selectric {
   border: none;
@@ -371,12 +393,14 @@ button:focus,
   font-size: 25px;
 }
 .action .button {
-  max-width: 286px;
   margin: 0 auto;
   display: block;
   text-shadow: 0 2px 0 #088700;
   background: #0faf19 url('../img/action/button.png') 0 0 repeat;
-  box-shadow: 0 4px 0 #088700, inset 0 0 4px 4px #65c81d;
+  box-shadow: 0 3px 0 #088700;
+}
+.action .button:hover, .action .button:focus {
+  box-shadow: 0 3px 0 #088700, inset 0 0 4px 4px #65c81d;
 }
 /* ==========================================================================
    COUNTER
@@ -405,17 +429,6 @@ button:focus,
   font: bold 9px/11px 'Helvetica Neue Сondensed', Helvetica, Arial, sans-serif;
   letter-spacing: -0.05em;
   text-transform: uppercase;
-  /*
-        @media @tablet-sm {
-            margin: 0 auto;
-            font-size: 14px;
-            line-height: 14px;
-        }
-        @media @desktop-sm {
-            font-size: 16px;
-            line-height: 16px;
-        }
-        */
 }
 .counter .line:after {
   display: table;
@@ -462,17 +475,6 @@ button:focus,
   font-weight: bold;
   color: #fff;
   text-align: center;
-  /*
-            @media @tablet-sm {
-                padding: 7px 3px 16px;
-                font-size: 64px;
-                line-height: 52px;
-            }
-            @media @desktop-sm {
-                font-size: 84px;
-                line-height: 84px;
-            }
-            */
 }
 .counter .line .number:before {
   width: 95px;
@@ -484,7 +486,7 @@ button:focus,
   top: -19px;
   left: -15px;
   z-index: 0;
-  background: url('../img/counter.png') no-repeat 0 0;
+  background: url('../img/counter/bg.png') no-repeat 0 0;
 }
 .counter .line .number span {
   display: block;
@@ -496,6 +498,70 @@ button:focus,
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
+}
+/* ==========================================================================
+   CALL-TO-ACTION
+   ========================================================================== */
+.cta {
+  padding: 25px 0 75px;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background: #000 url('../img/cta/bg.jpg') center center repeat;
+}
+.cta .wrapper {
+  padding-right: 17px;
+  padding-left: 17px;
+}
+.cta .pre {
+  max-width: 286px;
+  padding: 0 0 0 5px;
+  margin: 0 auto 16px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.cta .pre br {
+  display: none;
+}
+.cta .pre p {
+  margin: 0;
+}
+/** Order form */
+.form-order {
+  max-width: 286px;
+  margin: 0 auto;
+  display: block;
+}
+.form-order:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.form-order .form-group {
+  margin-bottom: 6px;
+}
+.form-order .form-submit {
+  margin-top: 24px;
+}
+.form-order .form-submit .button {
+  margin: 0 auto;
+  display: block;
+}
+.form-order .input-name,
+.form-order .input-phone {
+  padding-left: 40px;
+  font-size: 15px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 25px auto;
+}
+.form-order .input-name {
+  background-image: url('../img/icons/user.png');
+}
+.form-order .input-phone {
+  background-image: url('../img/icons/tel.png');
 }
 /* ==========================================================================
    INDEX
@@ -754,15 +820,15 @@ button:focus,
   padding-left: 38px;
 }
 .order .form-order input.tel {
-  background: #fff url('../img/order/icons/tel.png') 12px center no-repeat;
+  background: #fff url('../img/icons/tel.png') 12px center no-repeat;
   background-size: 18px 18px;
 }
 .order .form-order input.name {
-  background: #fff url('../img/order/icons/user.png') 12px center no-repeat;
+  background: #fff url('../img/icons/user.png') 12px center no-repeat;
   background-size: 18px 18px;
 }
 .order .form-order .selectric-country .label {
-  background: #fff url('../img/order/icons/globe.png') 12px center no-repeat;
+  background: #fff url('../img/icons/globe.png') 12px center no-repeat;
   background-size: 18px 18px;
 }
 .order .form-order .submit {
@@ -816,7 +882,6 @@ button:focus,
    ========================================================================== */
 .features {
   padding: 14px 0 20px;
-  background: #531b53;
   color: #fff;
   position: relative;
   z-index: 4;
@@ -824,10 +889,10 @@ button:focus,
 .features .bg {
   overflow: hidden;
   position: absolute;
-  left: 0;
-  top: -22px;
-  bottom: -22px;
+  top: -6px;
   right: 0;
+  bottom: -20px;
+  left: 0;
   z-index: 0;
   -webkit-transform: skewY(-7.4deg);
       -ms-transform: skewY(-7.4deg);
@@ -837,16 +902,16 @@ button:focus,
   display: block;
   content: '\0020';
   overflow: hidden;
-  background: url('../img/features/bg.jpg') center 0 no-repeat;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  bottom: -50px;
+  left: 0;
+  background: #531b53 url('../img/features/bg.jpg') center top repeat;
   background-size: cover;
   -webkit-transform: skewY(7.4deg);
       -ms-transform: skewY(7.4deg);
           transform: skewY(7.4deg);
-  position: absolute;
-  bottom: -30px;
-  top: -30px;
-  left: 0;
-  right: 0;
 }
 .features .wrapper {
   position: relative;
@@ -858,8 +923,8 @@ button:focus,
   font: bold 21px/25px 'Co Text Corp', Arial, sans-serif;
   color: #000;
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 20px;
+  max-width: 350px;
+  margin: 0 auto 20px;
   color: #fff;
   text-align: center;
 }
@@ -991,6 +1056,10 @@ button:focus,
   height: auto;
   position: relative;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .components .list ul {
   margin: 0;
@@ -1037,6 +1106,10 @@ button:focus,
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /* ==========================================================================
    MEDIA QUERIES
@@ -1107,6 +1180,16 @@ button:focus,
   [type='button'],
   button,
   .button {
+    width: 365px;
+    max-width: none;
+    padding: 16px 12px 12px;
+    font-size: 23px;
+  }
+  [type='submit'].button-big,
+  [type='reset'].button-big,
+  [type='button'].button-big,
+  button.button-big,
+  .button.button-big {
     width: auto;
     max-width: none;
     padding: 20px 24px 16px;
@@ -1169,19 +1252,42 @@ button:focus,
     clear: both;
     float: left;
   }
-  .action .button {
-    max-width: 365px;
-    padding-top: 16px;
-    padding-bottom: 12px;
-    margin: 0 auto;
-    font-size: 23px;
-  }
   .counter .title {
     margin-bottom: 24px;
   }
   .counter .line li {
     padding-left: 8px;
     padding-right: 8px;
+  }
+  .cta {
+    padding: 20px 0 120px;
+    margin-bottom: -70px;
+  }
+  .cta .pre {
+    max-width: 750px;
+    padding: 2px 0 0 12px;
+    margin-bottom: 36px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .0175em;
+  }
+  .form-order {
+    max-width: 612px;
+  }
+  .form-order .form-group {
+    width: 292px;
+    margin: 0 7px 25px;
+    float: left;
+  }
+  .form-order .form-submit {
+    width: 100%;
+    margin: 0;
+    float: left;
+    clear: both;
+  }
+  .form-order .input-name,
+  .form-order .input-phone {
+    padding: 10px 10px 10px 40px;
   }
   .testimonials {
     padding-top: 110px;
@@ -1408,12 +1514,10 @@ button:focus,
     line-height: 18px;
   }
   .features {
-    padding-top: 46px;
-    padding-bottom: 106px;
+    padding-top: 90px;
+    padding-bottom: 135px;
   }
   .features .bg {
-    top: -50px;
-    bottom: -50px;
     -webkit-transform: skewY(-7.4deg);
     -ms-transform: skewY(-7.4deg);
     transform: skewY(-7.4deg);
@@ -1422,8 +1526,8 @@ button:focus,
     -webkit-transform: skewY(7.4deg);
     -ms-transform: skewY(7.4deg);
     transform: skewY(7.4deg);
-    top: -60px;
-    bottom: -60px;
+    top: -80px;
+    bottom: -80px;
   }
   .features .heading {
     margin-top: 30px;
@@ -1432,18 +1536,19 @@ button:focus,
     line-height: 30px;
   }
   .features .heading {
-    max-width: 80%;
+    max-width: 550px;
     margin: 0 auto 124px;
     font-size: 30px;
     line-height: 36px;
   }
   .features .list {
-    max-width: 600px;
+    max-width: 612px;
     font-size: 16px;
     line-height: 16px;
+    letter-spacing: .025em;
   }
   .features .list li {
-    width: 200px;
+    width: 204px;
     margin-bottom: 0;
     padding: 0 35px;
     float: left;
@@ -1575,13 +1680,40 @@ button:focus,
     clear: none;
     float: right;
   }
-  .action .button {
-    width: 370px;
-  }
   .counter .title {
     margin-bottom: 32px;
     font-size: 40px;
     line-height: 40px;
+  }
+  .cta {
+    padding-top: 35px;
+    padding-bottom: 240px;
+  }
+  .cta .pre {
+    max-width: none;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .cta .pre br {
+    display: inline;
+  }
+  .form-order {
+    max-width: none;
+  }
+  .form-order .form-group {
+    margin-bottom: 0;
+  }
+  .form-order .form-submit {
+    width: auto;
+    float: right;
+    clear: none;
+    position: relative;
+  }
+  .form-order .form-submit .button {
+    margin: 0 5px 0 0;
+    position: relative;
+    top: -10px;
   }
   .testimonials {
     padding-top: 144px;
@@ -1762,8 +1894,8 @@ button:focus,
     bottom: -84px;
   }
   .features .bg:before {
-    bottom: -94px;
-    top: -94px;
+    top: -150px;
+    bottom: -150px;
   }
   .features .heading {
     font-size: 30px;

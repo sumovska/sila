@@ -47,8 +47,10 @@ textarea {
 
 [type='submit'], [type='reset'], [type='button'], button, .button {
     width: 100%;
-    max-width: 350px;
-    padding: 13px 13px 11px;
+    max-width: 286px;
+    padding: 13px 12px 11px;
+    border: none;
+    border-radius: 5px;
     display: inline-block;
     font: bold 18px/normal @font-heading;
     color: @color-white;
@@ -57,23 +59,37 @@ textarea {
     white-space: nowrap;
     text-transform: uppercase;
     background: @color-orange url('@{images}/testimonials/pattern.jpg') 0 0 repeat;
-    border: none;
-    box-shadow: 0 4px 0 0 @color-brown;
-    border-radius: 5px;
+    box-shadow: 0 3px 0 @color-brown;
     text-shadow: 0 2px 0 @color-brown;
-    transition: background-color @duration, color @duration;
+    transition: background-color @duration, color @duration, box-shadow @duration;
     user-select: none;
     appearance: none;
     cursor: pointer;
     @media @tablet-sm {
-        width: auto;
+        width: 365px;
         max-width: none;
-        padding: 20px 24px 16px;
-        font-size: 29px;
+        padding: 16px 12px 12px;
+        font-size: 23px;
+        &.button-big {
+            width: auto;
+            max-width: none;
+            padding: 20px 24px 16px;
+            font-size: 29px;
+        }
+    }
+
+    .button-green {
+        text-shadow: 0 2px 0 @color-green-dark;
+        background: @color-green url('@{images}/action/button.png') 0 0 repeat;
+        box-shadow: 0 3px 0 @color-green-dark;
+        &:hover {
+            box-shadow: 0 3px 0 @color-green-dark, inset 0 0 4px 4px @color-green-light;
+        }
     }
 
     &:hover {
         text-decoration: none;
+        box-shadow: 0 3px 0 @color-brown, inset 0 0 4px 4px #ff9a00;
     }
 }
 

@@ -88,21 +88,13 @@
 
 
     .button {
-        max-width: 286px;
         margin: 0 auto;
         display: block;
         text-shadow: 0 2px 0 @color-green-dark;
         background: @color-green url('@{images}/action/button.png') 0 0 repeat;
-        box-shadow: 0 4px 0 @color-green-dark, inset 0 0 4px 4px @color-green-light;
-        @media @tablet-sm {
-            max-width: 365px;
-            padding-top: 16px;
-            padding-bottom: 12px;
-            margin: 0 auto;
-            font-size: 23px;
-        }
-        @media @desktop-sm {
-            width: 370px;
+        box-shadow: 0 3px 0 @color-green-dark;
+        &:hover {
+            box-shadow: 0 3px 0 @color-green-dark, inset 0 0 4px 4px @color-green-light;
         }
     }
 }

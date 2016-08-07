@@ -3,56 +3,55 @@
    ========================================================================== */
 .features {
     padding: 14px 0 20px;
-    background: @color-violet;
     color: @color-white;
     position: relative;
     z-index: 4;
     @media @tablet-sm {
-        padding-top: 46px;
-        padding-bottom: 106px;
+        padding-top: 90px;
+        padding-bottom: 135px;
     }
     @media @desktop-sm {
-      padding-top: 14px;
-      padding-bottom: 34px;
+        padding-top: 14px;
+        padding-bottom: 34px;
     }
 
 
     .bg {
         overflow: hidden;
         position: absolute;
-        left: 0;
-        top: -22px;
-        bottom: -22px;
+        top: -6px;
         right: 0;
+        bottom: -20px;
+        left: 0;
         z-index: 0;
         transform: skewY(-7.4deg);
+
         &:before {
             .pseudo;
-            background: url('@{images}/features/bg.jpg') center 0 no-repeat;
+            position: absolute;
+            top: -50px;
+            right: 0;
+            bottom: -50px;
+            left: 0;
+            background: @color-violet url('@{images}/features/bg.jpg') center top repeat;
             background-size: cover;
             transform: skewY(7.4deg);
-            position: absolute;
-            bottom: -30px;
-            top: -30px;
-            left: 0;
-            right: 0;
         }
+
         @media @tablet-sm {
-            top: -50px;
-            bottom: -50px;
             transform: skewY(-7.4deg);
             &:before {
                 transform: skewY(7.4deg);
-                top: -60px;
-                bottom: -60px;
+                top: -80px;
+                bottom: -80px;
             }
         }
         @media @desktop-sm {
             top: -84px;
             bottom: -84px;
             &:before {
-                bottom: -94px;
-                top: -94px;
+                top: -150px;
+                bottom: -150px;
             }
         }
     }
@@ -64,12 +63,12 @@
 
     .heading {
         .h4;
-        margin-top: 0;
-        margin-bottom: 20px;
+        max-width: 350px;
+        margin: 0 auto 20px;
         color: @color-white;
         text-align: center;
         @media @tablet-sm {
-            max-width: 80%;
+            max-width: 550px;
             margin: 0 auto 124px;
             font-size: 30px;
             line-height: 36px;
@@ -89,15 +88,16 @@
         font: bold 15px/15px @font-heading;
         text-transform: uppercase;
         &:after {
-          .clearfix;
+            .clearfix;
         }
         @media @tablet-sm {
-            max-width: 600px;
+            max-width: 612px;
             font-size: 16px;
             line-height: 16px;
+            letter-spacing: .025em;
         }
         @media @desktop-sm {
-          max-width: 840px;
+            max-width: 840px;
             font-size: 23px;
             line-height: 24px;
         }
@@ -105,10 +105,10 @@
         li {
             margin-bottom: 13px;
             &:last-child {
-              margin-bottom: 0;
+                margin-bottom: 0;
             }
             @media @tablet-sm {
-              width: 200px;
+                width: 204px;
                 margin-bottom: 0;
                 padding: 0 35px;
                 float: left;
@@ -137,7 +137,7 @@
             box-shadow: 10px 0 0 0 rgba(0,0,0,.32);
             user-select: none;
             @media @tablet-sm {
-              margin-bottom: 8px;
+                margin-bottom: 8px;
                 width: 130px;
                 height: 130px;
             }

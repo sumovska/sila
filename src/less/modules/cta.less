@@ -1,0 +1,129 @@
+/* ==========================================================================
+   CALL-TO-ACTION
+   ========================================================================== */
+.cta {
+    padding: 25px 0 75px;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 1;
+    color: @color-white;
+    background: @color-black url('@{images}/cta/bg.jpg') center center repeat;
+    @media @tablet-sm {
+        padding: 20px 0 120px;
+        margin-bottom: -70px;
+    }
+    @media @desktop-sm {
+        padding-top: 35px;
+        padding-bottom: 240px;
+    }
+
+    .wrapper {
+        padding-right: 17px;
+        padding-left: 17px;
+    }
+
+    .pre {
+        max-width: 286px;
+        padding: 0 0 0 5px;
+        margin: 0 auto 16px;
+        font-size: 12px;
+        line-height: 14px;
+        @media @tablet-sm {
+            max-width: 750px;
+            padding: 2px 0 0 12px;
+            margin-bottom: 36px;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: .0175em;
+        }
+        @media @desktop-sm {
+            max-width: none;
+            padding: 0 20px;
+            font-size: 18px;
+            line-height: 22px;
+            br {
+                display: inline;
+            }
+        }
+
+        br {
+            display: none;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+/** Order form */
+.form-order {
+    max-width: 286px;
+    margin: 0 auto;
+    display: block;
+    @media @tablet-sm {
+        max-width: 612px;
+    }
+    @media @desktop-sm {
+        max-width: none;
+    }
+
+    &:after {
+        .clearfix;
+    }
+
+    .form-group {
+        margin-bottom: 6px;
+        @media @tablet-sm {
+            width: 292px;
+            margin: 0 7px 25px;
+            float: left;
+        }
+        @media @desktop-sm {
+            margin-bottom: 0;
+        }
+    }
+    .form-submit {
+        margin-top: 24px;
+        @media @tablet-sm {
+            width: 100%;
+            margin: 0;
+            float: left;
+            clear: both;
+        }
+        @media @desktop-sm {
+            width: auto;
+            float: right;
+            clear: none;
+            position: relative;
+        }
+
+        .button {
+            margin: 0 auto;
+            display: block;
+            @media @desktop-sm {
+                margin: 0 5px 0 0;
+                position: relative;
+                top: -10px;
+            }
+        }
+    }
+
+    .input-name, .input-phone {
+        padding-left: 40px;
+        font-size: 15px;
+        background-color: @color-white;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        background-size: 25px auto;
+        @media @tablet-sm {
+            padding: 10px 10px 10px 40px;
+        }
+    }
+
+    .input-name {
+        background-image: url('@{images}/icons/user.png');
+    }
+    .input-phone {
+        background-image: url('@{images}/icons/tel.png');
+    }
+}
