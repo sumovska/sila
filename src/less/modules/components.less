@@ -9,6 +9,10 @@
         padding-top: 142px;
         padding-bottom: 60px;
     }
+    @media @desktop-sm {
+      padding-top: 222px;
+      padding-bottom: 42px;
+    }
 
     .heading {
         .h4;
@@ -64,8 +68,9 @@
             top: -84px;
             bottom: -84px;
             &:before {
-                top: -120px;
-                bottom: -120px;
+                top: -150px;
+                bottom: -150px;
+                background: radial-gradient(ellipse at center, rgba(116,221,231,1) 0%,rgba(32,135,164,1) 80%,rgba(32,135,164,1) 100%);
             }
         }
     }
@@ -82,7 +87,7 @@
 
 
     .list {
-        max-width: 300px;
+        max-width: 440px;
         height: 656px;
         margin: 0 auto;
         position: relative;
@@ -98,7 +103,8 @@
             left: 50%;
         }
         &:before {
-            background: radial-gradient(ellipse at center, rgba(116,221,231,1) 0%,rgba(98,196,212,1) 100%);
+          .color-white(.15);
+            background: @color;
             border: 16px solid @color-blue;
             z-index: 0;
         }
@@ -131,8 +137,15 @@
         @media @desktop-sm {
             width: 736px;
             height: 736px;
+            &:before, &:after {
+              left: 2px;
+              right: 2px;
+            }
             &:before {
-                background: radial-gradient(ellipse at center, rgba(88,200,213,1) 0%,rgba(88,200,213,1) 40%,rgba(32,135,164,1) 100%);
+              bottom: 3px;
+            }
+            &:after {
+              background-size: 595px auto;
             }
         }
 
@@ -150,7 +163,7 @@
                 .pseudo;
                 background: rgba(111, 227, 240, .74);
                 box-shadow: 0 0 35px 25px rgba(111, 227, 240, .74);
-                border-radius: 50%;
+                border-radius: 20%;
                 position: absolute;
                 top: 5px;
                 bottom: 10px;
@@ -182,6 +195,7 @@
                 width: 120px;
                 height: 252px;
                 bottom: 30px;
+                left: 0;
             }
         }
 
@@ -339,15 +353,31 @@
                 }
                 &:nth-child(2) {
                     top: 58px;
-                    right: -84px;
+                    right: -77px;
+                    .pic {
+                      img {
+                            margin: -142px 0 0 -136px;
+                      }
+                    }
                 }
                 &:nth-child(3) {
                     top: 466px;
                     left: -64px;
+                    .pic {
+                      img {
+                            margin: -140px 0 0 -136px;
+                      }
+                    }
                 }
                 &:nth-child(4) {
                     top: 470px;
                     right: -84px;
+                    .pic {
+                      margin-bottom: 10px;
+                      img {
+                            margin: -120px 0 0 -160px;
+                      }
+                    }
                 }
             }
         }

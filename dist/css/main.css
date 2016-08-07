@@ -1022,7 +1022,7 @@ button:focus,
   z-index: 1;
 }
 .components .list {
-  max-width: 300px;
+  max-width: 440px;
   height: 656px;
   margin: 0 auto;
   position: relative;
@@ -1042,8 +1042,7 @@ button:focus,
   left: 50%;
 }
 .components .list:before {
-  background: -webkit-radial-gradient(center ellipse, #74dde7 0%, #62c4d4 100%);
-  background: radial-gradient(ellipse at center, #74dde7 0%, #62c4d4 100%);
+  background: rgba(255, 255, 255, 0.15);
   border: 16px solid #2087a4;
   z-index: 0;
 }
@@ -1070,7 +1069,7 @@ button:focus,
   overflow: hidden;
   background: rgba(111, 227, 240, 0.74);
   box-shadow: 0 0 35px 25px rgba(111, 227, 240, 0.74);
-  border-radius: 50%;
+  border-radius: 20%;
   position: absolute;
   top: 5px;
   bottom: 10px;
@@ -2000,6 +1999,10 @@ button:focus,
     height: 180px;
     margin-bottom: 8px;
   }
+  .components {
+    padding-top: 222px;
+    padding-bottom: 42px;
+  }
   .components .heading {
     font-size: 30px;
     line-height: 36px;
@@ -2013,21 +2016,31 @@ button:focus,
     bottom: -84px;
   }
   .components .bg:before {
-    top: -120px;
-    bottom: -120px;
+    top: -150px;
+    bottom: -150px;
+    background: -webkit-radial-gradient(center ellipse, #74dde7 0%, #2087a4 80%, #2087a4 100%);
+    background: radial-gradient(ellipse at center, #74dde7 0%, #2087a4 80%, #2087a4 100%);
   }
   .components .list {
     width: 736px;
     height: 736px;
   }
+  .components .list:before,
+  .components .list:after {
+    left: 2px;
+    right: 2px;
+  }
   .components .list:before {
-    background: -webkit-radial-gradient(center ellipse, #58c8d5 0%, #58c8d5 40%, #2087a4 100%);
-    background: radial-gradient(ellipse at center, #58c8d5 0%, #58c8d5 40%, #2087a4 100%);
+    bottom: 3px;
+  }
+  .components .list:after {
+    background-size: 595px auto;
   }
   .components .list .image {
     width: 120px;
     height: 252px;
     bottom: 30px;
+    left: 0;
   }
   .components .list ul {
     font-size: 30px;
@@ -2054,15 +2067,27 @@ button:focus,
   }
   .components .list li:nth-child(2) {
     top: 58px;
-    right: -84px;
+    right: -77px;
+  }
+  .components .list li:nth-child(2) .pic img {
+    margin: -142px 0 0 -136px;
   }
   .components .list li:nth-child(3) {
     top: 466px;
     left: -64px;
   }
+  .components .list li:nth-child(3) .pic img {
+    margin: -140px 0 0 -136px;
+  }
   .components .list li:nth-child(4) {
     top: 470px;
     right: -84px;
+  }
+  .components .list li:nth-child(4) .pic {
+    margin-bottom: 10px;
+  }
+  .components .list li:nth-child(4) .pic img {
+    margin: -120px 0 0 -160px;
   }
 }
 
