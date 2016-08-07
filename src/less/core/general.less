@@ -100,14 +100,18 @@ h3, .h3 {
 h4, .h4 {
     margin-top: @margin-sm;
     margin-bottom: @margin-sm;
-    font: bold 20px/24px @font-heading;
+    font: bold 21px/25px @font-heading;
     color: @color-black;
     text-transform: uppercase;
     @media @tablet-sm {
         margin-top: @margin-md;
         margin-bottom: @margin-md;
-        font-size: 26px;
+        font-size: 25px;
         line-height: 30px;
+    }
+    @media @desktop-sm {
+        font-size: 30px;
+        line-height: 36px;
     }
 }
 h5, .h5 {

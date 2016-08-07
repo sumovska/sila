@@ -32,17 +32,15 @@
     }
 
     .list {
-        margin-bottom: 32px;
+      margin: 0;
         font-size: 11px;
         line-height: 13px;
         text-align: left;
         @media @tablet-sm {
-            margin-bottom: 70px;
             font-size: 14px;
             line-height: 17px;
         }
         @media @desktop-sm {
-            margin-bottom: 54px;
             font-size: 18px;
             line-height: 22px;
         }
@@ -53,6 +51,9 @@
             .color-gray(.45);
             background: @color;
             position: relative;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
             @media @tablet-sm {
                 min-height: 140px;
                 margin-bottom: 20px;
@@ -94,7 +95,7 @@
 
     .button {
         min-width: 270px;
-        margin-bottom: 52px;
+        margin-top: 32px;
         padding: 15px;
         .color-gray(.45);
         border-radius: 0;
@@ -111,18 +112,22 @@
         }
         @media @tablet-sm {
             min-width: 410px;
-            margin-bottom: 68px;
+            margin-top: 70px;
             padding: 20px 20px 24px;
             font-size: 26px;
             line-height: 26px;
+        }
+        @media @desktop-sm {
+          margin-top: 54px;
         }
     }
 
     .adr {
         max-width: 390px;
-        margin: 0 auto;
+        margin: 52px auto 0;
         font: bold 8px/10px @font-heading;
         @media @tablet-sm {
+          margin-top: 68px;
             font-size: 12px;
             line-height: 14px;
         }
