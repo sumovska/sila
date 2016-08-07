@@ -2,11 +2,11 @@
    COMPONENTS
    ========================================================================== */
 .components {
-    padding: 90px 0;
+    padding: 90px 0 90px;
     position: relative;
     color: @color-white;
     @media @tablet-sm {
-        padding-top: 170px;
+        padding-top: 142px;
         padding-bottom: 60px;
     }
 
@@ -19,7 +19,7 @@
         color: @color-white;
         line-height: 26px;
         @media @tablet-sm {
-            max-width: 80%;
+            max-width: 600px;
             margin-top: 0;
             margin-bottom: 32px;
         }
@@ -31,8 +31,6 @@
 
     .bg {
         overflow: hidden;
-        background: @color-blue-light;
-        background: linear-gradient(to bottom, rgba(88,200,213,1) 0%,rgba(54,156,179,1) 100%);
         position: absolute;
         left: 0;
         top: -22px;
@@ -40,15 +38,35 @@
         right: 0;
         z-index: 0;
         transform: skewY(-6.4deg);
+        &:before {
+            .pseudo;
+            background: radial-gradient(ellipse at center, rgba(116,221,231,1) 0%,rgba(46,152,177,1) 100%);
+            position: absolute;
+            left: 0;
+            top: -50px;
+            bottom: -50px;
+            right: 0;
+            z-index: 0;
+            transform: skewY(6.4deg);
+        }
 
         @media @tablet-sm {
             top: -50px;
             bottom: -50px;
             transform: skewY(-7.4deg);
+            &:before {
+                top: -80px;
+                bottom: -80px;
+                transform: skewY(7.4deg);
+            }
         }
         @media @desktop-sm {
             top: -84px;
             bottom: -84px;
+            &:before {
+                top: -120px;
+                bottom: -120px;
+            }
         }
     }
 
@@ -80,35 +98,42 @@
             left: 50%;
         }
         &:before {
-          background: radial-gradient(ellipse at center, rgba(116,221,231,1) 0%,rgba(98,196,212,1) 100%);
-          border: 16px solid @color-blue;
-          z-index: 0;
+            background: radial-gradient(ellipse at center, rgba(116,221,231,1) 0%,rgba(98,196,212,1) 100%);
+            border: 16px solid @color-blue;
+            z-index: 0;
         }
         &:after {
-          margin-left: -280px;
-          background: url('@{images}/components/bg-s.png') center 62px no-repeat;
-          background-size: 320px auto;
-          z-index: 1;
+            margin-left: -280px;
+            background: url('@{images}/components/bg-s.png') center 62px no-repeat;
+            background-size: 320px auto;
+            z-index: 1;
         }
         @media @tablet-sm {
             width: 600px;
             max-width: none;
             height: 600px;
             margin: 0 auto;
-            &:before {
+            &:before, &:after {
                 width: auto;
                 height: auto;
                 margin: auto auto;
-                background: radial-gradient(ellipse at center, rgba(88,200,213,1) 0%,rgba(88,200,213,1) 40%,rgba(32,135,164,1) 100%);
                 top: 0;
                 bottom: 0;
-                left: 0;
-                right: 0;
+                left: -6px;
+                right: 4px;
+            }
+            &:after {
+                background-image: url('@{images}/components/bg.png');
+                background-size: 490px auto;
+                background-position: center center;
             }
         }
         @media @desktop-sm {
             width: 736px;
             height: 736px;
+            &:before {
+                background: radial-gradient(ellipse at center, rgba(88,200,213,1) 0%,rgba(88,200,213,1) 40%,rgba(32,135,164,1) 100%);
+            }
         }
 
         .image {
@@ -123,7 +148,9 @@
             z-index: 2;
             &:before {
                 .pseudo;
+                background: rgba(111, 227, 240, .74);
                 box-shadow: 0 0 35px 25px rgba(111, 227, 240, .74);
+                border-radius: 50%;
                 position: absolute;
                 top: 5px;
                 bottom: 10px;
@@ -139,16 +166,16 @@
                 user-select: none;
             }
             @media @tablet-sm {
-                width: 100px;
-                height: 210px;
+                width: 98px;
+                height: 206px;
                 margin: auto auto;
                 position: absolute;
                 top: 0;
-                bottom: 24px;
-                left: 0;
+                bottom: 22px;
+                left: -10px;
                 right: 0;
                 &:before {
-                    box-shadow: 0 0 30px 10px rgba(255, 255, 255, .54);
+                    box-shadow: 0 0 35px 15px rgba(255, 255, 255, .54);
                 }
             }
             @media @desktop-sm {
@@ -196,9 +223,8 @@
                 user-select: none;
             }
             @media @tablet-sm {
-                width: 160px;
-                height: 160px;
-                margin-bottom: -4px;
+                width: 162px;
+                height: 162px;
                 img {
                     width: 226px;
                     height: 226px;
@@ -221,61 +247,83 @@
             position: absolute;
             z-index: 3;
             &:nth-child(1) {
-              top: 302px;
-              left: 9px;
+                top: 302px;
+                left: 9px;
 
-              .pic {
-                img {
-                      margin: -86px 0 0 -74px;
+                .pic {
+                    img {
+                        margin: -86px 0 0 -74px;
+                    }
                 }
-              }
             }
             &:nth-child(2) {
                 top: 300px;
                 right: 2px;
                 .pic {
-                  img {
-                        margin: -86px 0 0 -84px;
-                  }
+                    img {
+                        margin: -86px 0 0 -82px;
+                    }
                 }
             }
             &:nth-child(3) {
                 top: 484px;
                 left: 15px;
                 .pic {
-                  margin-bottom: -4px;
-                  img {
+                    margin-bottom: -4px;
+                    img {
                         margin: -83px 0 0 -80px;
-                  }
+                    }
                 }
             }
             &:nth-child(4) {
                 top: 484px;
                 right: -5px;
                 .pic {
-                  margin-bottom: 4px;
-                  img {
+                    margin-bottom: 4px;
+                    img {
                         margin: -71px 0 0 -95px;
-                  }
+                    }
                 }
             }
             @media @tablet-sm {
                 width: 180px;
                 &:nth-child(1) {
                     top: 46px;
-                    left: -54px;
+                    left: -60px;
+                    .pic {
+                        img {
+                            margin: -119px 0 0 -101px;
+                        }
+                    }
                 }
                 &:nth-child(2) {
                     top: 46px;
-                    right: -66px;
+                    right: -60px;
+                    .pic {
+                        margin-bottom: -4px;
+                        img {
+                            margin: -116px 0 0 -112px;
+                        }
+                    }
                 }
                 &:nth-child(3) {
-                    top: 380px;
-                    left: -54px;
+                    top: 378px;
+                    left: -60px;
+                    .pic {
+                        img {
+                            margin: -112px 0 0 -110px;
+                        }
+                    }
                 }
                 &:nth-child(4) {
-                    top: 380px;
-                    right: -70px;
+                    top: 382px;
+                    right: -65px;
+                    .pic {
+                        margin-bottom: 8px;
+                        img {
+                            margin: -96px 0 0 -132px;
+                        }
+                    }
                 }
             }
             @media @desktop-sm {
