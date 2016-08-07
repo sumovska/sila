@@ -503,28 +503,79 @@ button:focus,
    CALL-TO-ACTION
    ========================================================================== */
 .cta {
-  padding: 25px 0 75px;
+  padding: 15px 0 75px;
   margin-bottom: -50px;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   color: #fff;
   background: #000 url('../img/cta/bg.jpg') center center repeat;
 }
 .cta .wrapper {
-  padding-right: 17px;
-  padding-left: 17px;
+  padding: 0 17px;
+  margin: 0 -10px;
 }
 .cta .pre {
+  max-width: 300px;
+  margin: 0 auto;
+  cursor: default;
+}
+.cta .pre:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.cta .pre .color {
+  color: #ff9700;
+}
+.cta .pre .left {
+  margin-bottom: 10px;
+  font: bold 14px/17px 'Co Text Corp', Arial, sans-serif;
+}
+.cta .pre .right {
+  max-width: 226px;
+  margin: 0 auto 20px;
+  font-size: 12px;
+  line-height: 29px;
+}
+.cta .pre .list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.cta .pre .list li {
+  padding-left: 40px;
+  position: relative;
+}
+.cta .pre .list li:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  width: 26px;
+  height: 21px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  background: url('../img/cta/check.png') no-repeat 0 0;
+  background-size: contain;
+}
+.cta .pre p {
+  margin: 0 0 10px;
+}
+.cta .pre p:last-child {
+  margin-bottom: 0;
+  text-align: right;
+}
+.cta .text {
   max-width: 286px;
   padding: 0 0 0 5px;
   margin: 0 auto 16px;
   font-size: 12px;
   line-height: 14px;
 }
-.cta .pre br {
+.cta .text br {
   display: none;
 }
-.cta .pre p {
+.cta .text p {
   margin: 0;
 }
 /** Order form */
@@ -566,6 +617,122 @@ button:focus,
 /* ==========================================================================
    INDEX
    ========================================================================== */
+.index {
+  padding: 100px 0 50px;
+  position: relative;
+  z-index: 5;
+  color: #fff;
+  background: #000 url('../img/index/bg.jpg') no-repeat 40.5% top;
+  background-size: cover;
+  cursor: default;
+}
+.index .wrapper {
+  max-width: 385px;
+  min-height: 280px;
+  padding: 0 14px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+.index:before,
+.index:after {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background: #000;
+  opacity: .3;
+}
+.index:before {
+  top: 100px;
+  bottom: 0;
+}
+.index:after {
+  display: none;
+}
+.index .heading {
+  margin: 0;
+  font: bold 21px/38px 'Co Text Corp', Arial, sans-serif;
+  color: #ff9700;
+  letter-spacing: -0.0025em;
+  text-transform: none;
+}
+.index .heading strong {
+  margin: 0 -5px;
+  display: block;
+  font-size: 44px;
+  font-weight: inherit;
+  text-transform: uppercase;
+  color: #fff;
+}
+.index .subheading {
+  margin: 15px 0 0 5px;
+  font: bold 10px 'Co Text Corp', Arial, sans-serif;
+  letter-spacing: -0.025em;
+}
+.index .product {
+  width: 145px;
+  height: auto;
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: -80px;
+  z-index: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.index .price {
+  margin: 13px 0 0;
+  font: bold 13px 'Co Text Corp', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+}
+.index .price .n {
+  font-style: normal;
+  text-transform: none;
+}
+.index .price .old {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+  display: block;
+}
+.index .price .old .strike {
+  display: inline-block;
+  position: relative;
+}
+.index .price .old .strike:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  height: 2px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: -4px;
+  bottom: 0;
+  left: -4px;
+  background: #f00;
+}
+.index .price .new {
+  margin: 23px 0 0;
+  font-size: 15px;
+  letter-spacing: .0025em;
+}
+.index .price .new .n {
+  display: block;
+  font-size: 35px;
+  line-height: 50px;
+  color: #ff9700;
+  letter-spacing: 0;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 0 0 2px #fff;
+}
 /* ==========================================================================
    TESTIMONIALS
    ========================================================================== */
@@ -1384,7 +1551,43 @@ button:focus,
     padding: 20px 0 120px;
     margin-bottom: -70px;
   }
-  .cta .pre {
+  .cta .wrapper {
+    margin: 0 auto;
+  }
+  .cta .pre .left {
+    width: 280px;
+    margin-left: -360px;
+    position: absolute;
+    top: -270px;
+    left: 50%;
+    font-size: 19px;
+    line-height: 23px;
+  }
+  .cta .pre .right {
+    max-width: 280px;
+    margin-left: 120px;
+    position: absolute;
+    left: 50%;
+    top: -245px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+  .cta .pre .list li {
+    padding-left: 45px;
+  }
+  .cta .pre .list li:before {
+    width: 37px;
+    height: 29px;
+    top: 8px;
+  }
+  .cta .pre p:last-child {
+    margin-top: 70px;
+    text-align: left;
+  }
+  .cta .pre p:last-child br {
+    display: none;
+  }
+  .cta .text {
     max-width: 750px;
     padding: 2px 0 0 12px;
     margin-bottom: 36px;
@@ -1409,6 +1612,76 @@ button:focus,
   .form-order .input-name,
   .form-order .input-phone {
     padding: 10px 10px 10px 40px;
+  }
+  .index {
+    padding-top: 170px;
+    z-index: 1;
+  }
+  .index .wrapper {
+    max-width: 770px;
+    min-height: 495px;
+    padding: 0 23px;
+  }
+  .index:before {
+    top: 160px;
+    bottom: 367px;
+  }
+  .index:after {
+    height: 298px;
+    display: block;
+    top: auto;
+    bottom: 0;
+  }
+  .index .head {
+    width: 420px;
+    float: left;
+  }
+  .index .heading {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .index .heading strong {
+    margin: 0 -7px;
+    font-size: 64px;
+    line-height: 56px;
+  }
+  .index .subheading {
+    margin: 22px 0 0 4px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: .0025em;
+  }
+  .index .product {
+    width: 200px;
+    height: 330px;
+    margin: 0 auto;
+    right: 0;
+    bottom: -66px;
+    left: 53px;
+  }
+  .index .price {
+    width: 280px;
+    float: right;
+    text-align: right;
+  }
+  .index .price .old {
+    margin: 4px -4px 0 0;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: -0.0025em;
+    text-align: right;
+  }
+  .index .price .new {
+    margin: 10px 0 0;
+    font-size: 29px;
+    letter-spacing: -0.0025em;
+  }
+  .index .price .new .n {
+    font-size: 58px;
+    line-height: 80px;
+    letter-spacing: -0.005em;
+    -webkit-text-stroke: 2px #fff;
+    text-shadow: 0 0 4px #fff;
   }
   .testimonials {
     padding-top: 110px;
@@ -1906,13 +2179,33 @@ button:focus,
     padding-top: 35px;
     padding-bottom: 240px;
   }
-  .cta .pre {
+  .cta .pre .left {
+    width: 440px;
+    margin-left: -480px;
+    font-size: 26px;
+    line-height: 32px;
+    top: -268px;
+  }
+  .cta .pre .right {
+    max-width: 350px;
+    margin-left: 95px;
+    font-size: 18px;
+    line-height: 40px;
+    top: -270px;
+  }
+  .cta .pre .list li {
+    padding-left: 60px;
+  }
+  .cta .pre p:last-child {
+    margin-top: 45px;
+  }
+  .cta .text {
     max-width: none;
     padding: 0 20px;
     font-size: 18px;
     line-height: 22px;
   }
-  .cta .pre br {
+  .cta .text br {
     display: inline;
   }
   .form-order {
@@ -1931,6 +2224,44 @@ button:focus,
     margin: 0 5px 0 0;
     position: relative;
     top: -10px;
+  }
+  .index .wrapper {
+    max-width: 1000px;
+  }
+  .index .head {
+    width: 500px;
+  }
+  .index .heading {
+    line-height: 46px;
+  }
+  .index .heading strong {
+    font-size: 72px;
+    line-height: 70px;
+  }
+  .index .subheading {
+    margin-top: 11px;
+    margin-bottom: 0;
+  }
+  .index .product {
+    left: 10px;
+  }
+  .index .price {
+    width: 400px;
+    margin: 5px 25px 0;
+  }
+  .index .price .old {
+    font-size: 22px;
+    letter-spacing: .025em;
+  }
+  .index .price .new {
+    margin: 15px 0 0;
+    font-size: 30px;
+    letter-spacing: .035em;
+  }
+  .index .price .new .n {
+    font-size: 67px;
+    line-height: 88px;
+    letter-spacing: -0.025em;
   }
   .testimonials {
     padding-top: 144px;

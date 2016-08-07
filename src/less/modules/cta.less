@@ -2,10 +2,10 @@
    CALL-TO-ACTION
    ========================================================================== */
 .cta {
-    padding: 25px 0 75px;
+    padding: 15px 0 75px;
     margin-bottom: -50px;
     position: relative;
-    z-index: 1;
+    z-index: 3;
     color: @color-white;
     background: @color-black url('@{images}/cta/bg.jpg') center center repeat;
     @media @tablet-sm {
@@ -18,11 +18,120 @@
     }
 
     .wrapper {
-        padding-right: 17px;
-        padding-left: 17px;
+        padding: 0 17px;
+        margin: 0 -10px;
+        @media @tablet-sm {
+            margin: 0 auto;
+        }
     }
 
     .pre {
+        max-width: 300px;
+        margin: 0 auto;
+        cursor: default;
+        &:after {
+            .clearfix;
+        }
+
+        .color {
+            color: @color-gamboge;
+        }
+
+        .left {
+            margin-bottom: 10px;
+            font: bold 14px/17px @font-heading;
+            @media @tablet-sm {
+                width: 280px;
+                margin-left: -360px;
+                position: absolute;
+                top: -270px;
+                left: 50%;
+                font-size: 19px;
+                line-height: 23px;
+            }
+            @media @desktop-sm {
+                width: 440px;
+                margin-left: -480px;
+                font-size: 26px;
+                line-height: 32px;
+                top: -268px;
+            }
+        }
+        .right {
+            max-width: 226px;
+            margin: 0 auto 20px;
+            font-size: 12px;
+            line-height: 29px;
+            @media @tablet-sm {
+                max-width: 280px;
+                margin-left: 120px;
+                position: absolute;
+                left: 50%;
+                top: -245px;
+                font-size: 14px;
+                line-height: 32px;
+            }
+            @media @desktop-sm {
+                max-width: 350px;
+                margin-left: 95px;
+                font-size: 18px;
+                line-height: 40px;
+                top: -270px;
+            }
+        }
+
+        .list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                padding-left: 40px;
+                position: relative;
+                @media @tablet-sm {
+                    padding-left: 45px;
+                }
+                @media @desktop-sm {
+                    padding-left: 60px;
+                }
+                &:before {
+                    .pseudo;
+                    width: 26px;
+                    height: 21px;
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    background: url('@{images}/cta/check.png') no-repeat 0 0;
+                    background-size: contain;
+                    @media @tablet-sm {
+                        width: 37px;
+                        height: 29px;
+                        top: 8px;
+                    }
+                }
+            }
+        }
+
+        p {
+            margin: 0 0 10px;
+            &:last-child {
+                margin-bottom: 0;
+                text-align: right;
+                @media @tablet-sm {
+                    margin-top: 70px;
+                    text-align: left;
+                    br {
+                        display: none;
+                    }
+                }
+                @media @desktop-sm {
+                    margin-top: 45px;
+                }
+            }
+        }
+    }
+
+    .text {
         max-width: 286px;
         padding: 0 0 0 5px;
         margin: 0 auto 16px;

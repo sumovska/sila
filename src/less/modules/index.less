@@ -2,4 +2,233 @@
    INDEX
    ========================================================================== */
 .index {
+    padding: 100px 0 50px;
+    position: relative;
+    z-index: 5;
+    color: @color-white;
+    background: @color-black url('@{images}/index/bg.jpg') no-repeat 40.5% top;
+    background-size: cover;
+    cursor: default;
+    @media @tablet-sm {
+        padding-top: 170px;
+        z-index: 1;
+    }
+
+    .wrapper {
+        max-width: 385px;
+        min-height: 280px;
+        padding: 0 14px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 5;
+        @media @tablet-sm {
+            max-width: 770px;
+            min-height: 495px;
+            padding: 0 23px;
+        }
+        @media @desktop-sm {
+            max-width: 1000px;
+        }
+    }
+
+
+    &:before, &:after {
+        .pseudo;
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background: @color-black;
+        opacity: .3;
+    }
+    &:before {
+        top: 100px;
+        bottom: 0;
+        @media @tablet-sm {
+            top: 160px;
+            bottom: 367px;
+        }
+    }
+    &:after {
+        display: none;
+        @media @tablet-sm {
+            height: 298px;
+            display: block;
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    .head {
+        @media @tablet-sm {
+            width: 420px;
+            float: left;
+        }
+        @media @desktop-sm {
+            width: 500px;
+        }
+    }
+
+    .heading {
+        margin: 0;
+        font: bold 21px/38px @font-heading;
+        color: @color-gamboge;
+        letter-spacing: -.0025em;
+        text-transform: none;
+        @media @tablet-sm {
+            font-size: 30px;
+            line-height: 50px;
+        }
+        @media @desktop-sm {
+            line-height: 46px;
+        }
+
+        strong {
+            margin: 0 -5px;
+            display: block;
+            font-size: 44px;
+            font-weight: inherit;
+            text-transform: uppercase;
+            color: @color-white;
+            @media @tablet-sm {
+                margin: 0 -7px;
+                font-size: 64px;
+                line-height: 56px;
+            }
+            @media @desktop-sm {
+                font-size: 72px;
+                line-height: 70px;
+            }
+        }
+    }
+
+    .subheading {
+        margin: 15px 0 0 5px;
+        font: bold 10px @font-heading;
+        letter-spacing: -.025em;
+        @media @tablet-sm {
+            margin: 22px 0 0 4px;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: .0025em;
+        }
+        @media @desktop-sm {
+            margin-top: 11px;
+            margin-bottom: 0;
+        }
+    }
+
+    .product {
+        width: 145px;
+        height: auto;
+        display: block;
+        position: absolute;
+        right: 10px;
+        bottom: -80px;
+        z-index: 0;
+        user-select: none;
+        @media @tablet-sm {
+            width: 200px;
+            height: 330px;
+            margin: 0 auto;
+            right: 0;
+            bottom: -66px;
+            left: 53px;
+        }
+        @media @desktop-sm {
+            left: 10px;
+        }
+    }
+
+    .price {
+        margin: 13px 0 0;
+        font: bold 13px @font-heading;
+        text-transform: uppercase;
+        letter-spacing: -.025em;
+        @media @tablet-sm {
+            width: 280px;
+            float: right;
+            text-align: right;
+        }
+        @media @desktop-sm {
+            width: 400px;
+            margin: 5px 25px 0;
+        }
+
+        .n {
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .old {
+            margin: 0;
+            font-size: 13px;
+            text-align: center;
+            display: block;
+            @media @tablet-sm {
+                margin: 4px -4px 0 0;
+                font-size: 21px;
+                line-height: 24px;
+                letter-spacing: -.0025em;
+                text-align: right;
+            }
+            @media @desktop-sm {
+                font-size: 22px;
+                letter-spacing: .025em;
+            }
+            .strike {
+                display: inline-block;
+                position: relative;
+                &:before {
+                    .pseudo;
+                    height: 2px;
+                    margin: auto;
+                    position: absolute;
+                    top: 0;
+                    right: -4px;
+                    bottom: 0;
+                    left: -4px;
+                    background: @color-red;
+                }
+            }
+        }
+
+        .new {
+            margin: 23px 0 0;
+            font-size: 15px;
+            letter-spacing: .0025em;
+            @media @tablet-sm {
+                margin: 10px 0 0;
+                font-size: 29px;
+                letter-spacing: -.0025em;
+            }
+            @media @desktop-sm {
+                margin: 15px 0 0;
+                font-size: 30px;
+                letter-spacing: .035em;
+            }
+
+            .n {
+                display: block;
+                font-size: 35px;
+                line-height: 50px;
+                color: @color-gamboge;
+                letter-spacing: 0;
+                -webkit-text-stroke: 1px @color-white;
+                text-shadow: 0 0 2px @color-white;
+                @media @tablet-sm {
+                    font-size: 58px;
+                    line-height: 80px;
+                    letter-spacing: -.005em;
+                    -webkit-text-stroke: 2px @color-white;
+                    text-shadow: 0 0 4px @color-white;
+                }
+                @media @desktop-sm {
+                    font-size: 67px;
+                    line-height: 88px;
+                    letter-spacing: -.025em;
+                }
+            }
+        }
+    }
 }
