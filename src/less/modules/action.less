@@ -1,0 +1,108 @@
+/* ==========================================================================
+   ACTION
+   ========================================================================== */
+.action {
+    padding: 18px 0 20px;
+    position: relative;
+    z-index: 100;
+    color: @color-white;
+    background: @color-gray;
+    cursor: default;
+    @media @tablet-sm {
+        padding-bottom: 18px;
+    }
+    @media @desktop-sm {
+        padding-top: 16px;
+    }
+
+    .wrapper {
+        padding: 0 17px;
+        @media @tablet-sm {
+            max-width: 640px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 0 auto;
+        }
+        @media @desktop-sm {
+            max-width: 1020px;
+        }
+    }
+
+    .heading {
+        margin: 0 0 16px;
+        font: 18px/20px @font-heading;
+        color: @color-white;
+        text-transform: uppercase;
+        letter-spacing: -.005em;
+        text-align: center;
+        @media @tablet-sm {
+            margin: 12px 0 0 0;
+            float: left;
+            font-size: 20px;
+            line-height: 22px;
+            text-align: left;
+        }
+
+        strong {
+            font-size: 25px;
+            @media @tablet-sm {
+                font-size: 27px;
+                margin-left: -5px;
+            }
+        }
+    }
+
+
+    .counter {
+        @media @tablet-sm {
+            max-width: 272px;
+            margin: 0;
+            float: right;
+            position: relative;
+            top: -6px;
+            left: -14px;
+        }
+        @media @desktop-sm {
+            margin-top: -6px;
+            margin-left: 15px;
+            float: left;
+            top: auto;
+            left: auto;
+        }
+    }
+
+    .total {
+        @media @tablet-sm {
+            width: 100%;
+            padding-top: 10px;
+            clear: both;
+            float: left;
+        }
+        @media @desktop-sm {
+            width: auto;
+            padding-top: 4px;
+            clear: none;
+            float: right;
+        }
+    }
+
+
+    .button {
+        max-width: 286px;
+        margin: 0 auto;
+        display: block;
+        text-shadow: 0 2px 0 @color-green-dark;
+        background: @color-green url('@{images}/action/button.png') 0 0 repeat;
+        box-shadow: 0 4px 0 @color-green-dark, inset 0 0 4px 4px @color-green-light;
+        @media @tablet-sm {
+            max-width: 365px;
+            padding-top: 16px;
+            padding-bottom: 12px;
+            margin: 0 auto;
+            font-size: 23px;
+        }
+        @media @desktop-sm {
+            width: 370px;
+        }
+    }
+}

@@ -189,7 +189,6 @@ legend {
   margin: 0;
   display: block;
 }
-/*** FIELDS ***/
 [type='text'],
 [type='tel'],
 [type='email'],
@@ -239,7 +238,6 @@ textarea {
   color: #707070;
   opacity: 1;
 }
-/*** BUTTONS ***/
 [type='submit'],
 [type='reset'],
 [type='button'],
@@ -283,10 +281,9 @@ button:focus,
 .button:focus {
   text-decoration: none;
 }
-/*** Selectric ***/
 .selectric {
-  background: #fff;
   border: none;
+  background: #fff;
 }
 .selectric .label {
   margin-left: 0;
@@ -347,6 +344,158 @@ button:focus,
 }
 .form-group:last-child {
   margin-bottom: 0;
+}
+/* ==========================================================================
+   ACTION
+   ========================================================================== */
+.action {
+  padding: 18px 0 20px;
+  position: relative;
+  z-index: 100;
+  color: #fff;
+  background: #3c3c3c;
+  cursor: default;
+}
+.action .wrapper {
+  padding: 0 17px;
+}
+.action .heading {
+  margin: 0 0 16px;
+  font: 18px/20px 'Co Text Corp', Arial, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  text-align: center;
+}
+.action .heading strong {
+  font-size: 25px;
+}
+.action .button {
+  max-width: 286px;
+  margin: 0 auto;
+  display: block;
+  text-shadow: 0 2px 0 #088700;
+  background: #0faf19 url('../img/action/button.png') 0 0 repeat;
+  box-shadow: 0 4px 0 #088700, inset 0 0 4px 4px #65c81d;
+}
+/* ==========================================================================
+   COUNTER
+   ========================================================================== */
+.counter {
+  max-width: 286px;
+  margin: 0 auto 22px;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.counter .title {
+  margin: 0 0 18px;
+  font: bold 29px/33px 'Co Text Corp', Arial, sans-serif;
+  text-shadow: 2px 2px 2px rgba(8, 53, 73, 0.39);
+  text-transform: uppercase;
+  text-align: center;
+}
+.counter .line {
+  margin: 0 -9px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font: bold 9px/11px 'Helvetica Neue Сondensed', Helvetica, Arial, sans-serif;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  /*
+        @media @tablet-sm {
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        @media @desktop-sm {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        */
+}
+.counter .line:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.counter .line li {
+  width: 25%;
+  padding: 0 10px;
+  float: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.counter .line li:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.counter .line .number {
+  width: 58px;
+  height: 52px;
+  padding: 1px;
+  margin: 3px 0 0;
+  display: block;
+  position: relative;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 44px;
+  line-height: 47px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  /*
+            @media @tablet-sm {
+                padding: 7px 3px 16px;
+                font-size: 64px;
+                line-height: 52px;
+            }
+            @media @desktop-sm {
+                font-size: 84px;
+                line-height: 84px;
+            }
+            */
+}
+.counter .line .number:before {
+  width: 95px;
+  height: 91px;
+  display: block;
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  top: -19px;
+  left: -15px;
+  z-index: 0;
+  background: url('../img/counter.png') no-repeat 0 0;
+}
+.counter .line .number span {
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+.counter .line .text {
+  width: 100%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
 }
 /* ==========================================================================
    INDEX
@@ -551,86 +700,13 @@ button:focus,
   font-size: 16px;
   display: block;
 }
-.order .counter {
-  max-width: 434px;
-  margin: 0 auto 18px;
-  cursor: default;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.order .counter .title {
-  margin: 0 0 18px;
-  font: bold 29px/33px 'Co Text Corp', Arial, sans-serif;
-  text-shadow: 2px 2px 2px rgba(8, 53, 73, 0.39);
-  text-transform: uppercase;
-  text-align: center;
-}
-.order .counter .line {
-  margin: 0 -9px;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-  font: bold 10px/10px 'Helvetica Neue Сondensed', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-}
-.order .counter .line:after {
-  display: table;
-  content: '\0020';
-  clear: both;
-}
-.order .counter .line li {
-  width: 25%;
-  padding: 0 9px;
-  float: left;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.order .counter .line li:after {
-  display: table;
-  content: '\0020';
-  clear: both;
-}
-.order .counter .line .number {
-  margin: 4px 0 0 0;
-  padding: 3px;
-  display: block;
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  font-size: 47px;
-  line-height: 47px;
-  font-weight: bold;
-  color: #fff;
-  background: #000;
-  position: relative;
-}
-.order .counter .line .text {
-  width: 100%;
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-}
 .order .form-order {
-  max-width: 450px;
+  max-width: 350px;
   min-height: 400px;
   margin: 0 auto;
   padding-top: 180px;
   position: relative;
+  cursor: default;
 }
 .order .form-order .image {
   position: absolute;
@@ -660,6 +736,10 @@ button:focus,
   display: block;
   position: relative;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .order .form-order .area {
   padding-bottom: 32px;
@@ -707,6 +787,10 @@ button:focus,
   left: 0;
   right: 0;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /* ==========================================================================
    FOOTER
@@ -794,10 +878,14 @@ button:focus,
   width: 116px;
   height: 116px;
   margin: 0 auto 6px;
-  display: block;
   border: 4px solid #8c1aa9;
   border-radius: 5px;
+  display: block;
   box-shadow: 10px 0 0 0 rgba(0, 0, 0, 0.32);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /* ==========================================================================
    COMPONENTS
@@ -1028,6 +1116,54 @@ button:focus,
   .form-group {
     margin-bottom: 20px;
   }
+  .action {
+    padding-bottom: 18px;
+  }
+  .action .wrapper {
+    max-width: 640px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+  .action .heading {
+    margin: 12px 0 0 0;
+    float: left;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: left;
+  }
+  .action .heading strong {
+    font-size: 27px;
+    margin-left: -5px;
+  }
+  .action .counter {
+    max-width: 272px;
+    margin: 0;
+    float: right;
+    position: relative;
+    top: -6px;
+    left: -14px;
+  }
+  .action .total {
+    width: 100%;
+    padding-top: 10px;
+    clear: both;
+    float: left;
+  }
+  .action .button {
+    max-width: 365px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    margin: 0 auto;
+    font-size: 23px;
+  }
+  .counter .title {
+    margin-bottom: 24px;
+  }
+  .counter .line li {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   .testimonials {
     padding-top: 110px;
     padding-bottom: 42px;
@@ -1197,26 +1333,6 @@ button:focus,
   }
   .order .heading .small {
     font-size: 31px;
-  }
-  .order .counter {
-    margin-bottom: 36px;
-  }
-  .order .counter .title {
-    margin-bottom: 24px;
-  }
-  .order .counter .line {
-    margin: 0 auto;
-    font-size: 14px;
-    line-height: 14px;
-  }
-  .order .counter .line li {
-    padding-left: 13px;
-    padding-right: 13px;
-  }
-  .order .counter .line .number {
-    padding: 7px 3px 16px;
-    font-size: 64px;
-    line-height: 52px;
   }
   .order .form-order {
     max-width: 800px;
@@ -1402,6 +1518,33 @@ button:focus,
     padding-left: 20px;
     padding-right: 20px;
   }
+  .action {
+    padding-top: 16px;
+  }
+  .action .wrapper {
+    max-width: 1020px;
+  }
+  .action .counter {
+    margin-top: -6px;
+    margin-left: 15px;
+    float: left;
+    top: auto;
+    left: auto;
+  }
+  .action .total {
+    width: auto;
+    padding-top: 4px;
+    clear: none;
+    float: right;
+  }
+  .action .button {
+    width: 370px;
+  }
+  .counter .title {
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 40px;
+  }
   .testimonials {
     padding-top: 144px;
     padding-bottom: 144px;
@@ -1506,23 +1649,6 @@ button:focus,
   }
   .order .heading .small {
     font-size: 42px;
-  }
-  .order .counter {
-    max-width: 580px;
-    margin-bottom: 50px;
-  }
-  .order .counter .title {
-    margin-bottom: 32px;
-    font-size: 40px;
-    line-height: 40px;
-  }
-  .order .counter .line {
-    font-size: 16px;
-    line-height: 16px;
-  }
-  .order .counter .line .number {
-    font-size: 84px;
-    line-height: 84px;
   }
   .order .form-order {
     max-width: 1000px;

@@ -92,7 +92,7 @@ module.exports = function(grunt) {
                         d.bower + 'jquery/dist/jquery.min.js',
                         d.bower + 'jquery/dist/jquery.min.map',
                         d.bower + 'fastclick/lib/fastclick.js',
-                        d.bower + 'magnific-popup/dist/jquery.magnific-popup.min.js',
+                        d.bower + 'jquery.countdown/dist/jquery.countdown.min.js',
                         d.bower + 'jquery-selectric/public/jquery.selectric.min.js'
                     ],
                     dest: temp.js + 'vendor'

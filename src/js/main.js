@@ -3,27 +3,20 @@
 /** Remove tap delay on touch devices */
 FastClick.attach(document.body);
 
-/** Magnific Popup Settings */
-$.extend(true, $.magnificPopup.defaults, {
-    closeMarkup: '<span title="%title%" class="mfp-close">x</span>',
-    gallery: {
-        arrowMarkup: '<div title="%title%" class="mfp-arrow mfp-arrow-%dir%"></div>'
-    },
-    settings: {
-        cache: false
-    },
-    mainClass: 'mfp-slide-in',
-    removalDelay: 600,
-    midClick: true,
-    autoFocusLast: false,
-    preload: false,
-    fixedContentPos: true,
-    fixedBgPos: true
-});
-
-
 /** On document ready */
 $(document).ready(function() {
+
+    /** Counter */
+    $('.counter').each(function() {
+        $('.number', this).wrapInner('<span></span>');
+        var a = $('.number span', this);
+        $(this).countdown('2016/08/20 12:00:00', function(event) {
+            a.eq(0).html(event.strftime('%D'));
+            a.eq(1).html(event.strftime('%H'));
+            a.eq(2).html(event.strftime('%M'));
+            a.eq(3).html(event.strftime('%S'));
+        });
+    });
 
     /*** Selectric  ***/
     $('.selectric').selectric({

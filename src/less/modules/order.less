@@ -57,108 +57,13 @@
         }
     }
 
-    .counter {
-        max-width: 434px;
-        margin: 0 auto 18px;
-        cursor: default;
-        user-select: none;
-        @media @tablet-sm {
-            margin-bottom: 36px;
-        }
-        @media @desktop-sm {
-            max-width: 580px;
-            margin-bottom: 50px;
-        }
-
-        .title {
-            margin: 0 0 18px;
-            font: bold 29px/33px @font-heading;
-            text-shadow: 2px 2px 2px rgba(8, 53, 73, .39);
-            text-transform: uppercase;
-            text-align: center;
-            @media @tablet-sm {
-                margin-bottom: 24px;
-            }
-            @media @desktop-sm {
-                margin-bottom: 32px;
-                font-size: 40px;
-                line-height: 40px;
-            }
-        }
-
-        .line {
-            margin: 0 -9px;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-            font: bold 10px/10px @font-helv;
-            text-transform: uppercase;
-            &:after {
-                .clearfix;
-            }
-            @media @tablet-sm {
-                margin: 0 auto;
-                font-size: 14px;
-                line-height: 14px;
-            }
-            @media @desktop-sm {
-                font-size: 16px;
-                line-height: 16px;
-            }
-
-
-            li {
-                width: 25%;
-                padding: 0 9px;
-                float: left;
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;
-                &:after {
-                    .clearfix;
-                }
-                @media @tablet-sm {
-                    padding-left: 13px;
-                    padding-right: 13px;
-                }
-            }
-
-            .number {
-                margin: 4px 0 0 0;
-                padding: 3px;
-                display: block;
-                flex-basis: 100%;
-                flex-grow: 1;
-                font-size: 47px;
-                line-height: 47px;
-                font-weight: bold;
-                color: @color-white;
-                background: @color-black;
-                position: relative;
-                @media @tablet-sm {
-                    padding: 7px 3px 16px;
-                    font-size: 64px;
-                    line-height: 52px;
-                }
-                @media @desktop-sm {
-                    font-size: 84px;
-                    line-height: 84px;
-                }
-            }
-
-            .text {
-                width: 100%;
-                flex-basis: 100%;
-            }
-        }
-    }
-
     .form-order {
-        max-width: 450px;
+        max-width: 350px;
         min-height: 400px;
         margin: 0 auto;
         padding-top: 180px;
         position: relative;
+        cursor: default;
         @media @tablet-sm {
             max-width: 800px;
             min-height: 428px;
@@ -200,6 +105,7 @@
                 display: block;
                 position: relative;
                 z-index: 1;
+                user-select: none;
             }
             @media @tablet-sm {
                 width: 250px;
@@ -344,6 +250,7 @@
         left: 0;
         right: 0;
         text-align: center;
+        user-select: none;
         @media @tablet-sm {
             margin: -8px 0 16px 0;
             font-size: 25px;

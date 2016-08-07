@@ -7,7 +7,6 @@ form, fieldset, legend {
     margin: 0;
     display: block;
 }
-/*** FIELDS ***/
 [type='text'], [type='tel'], [type='email'], textarea {
     width: 100%;
     padding: 10px;
@@ -21,19 +20,15 @@ form, fieldset, legend {
     border: none;
     transition: border-color @duration;
     appearance: none;
-
-    &:focus {
+    @media @tablet-sm {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        font-size: 24px;
     }
 
     .form-group & {
         width: 100%;
         max-width: 100%;
-    }
-
-    @media @tablet-sm {
-      padding-top: 18px;
-      padding-bottom: 18px;
-      font-size: 24px;
     }
 }
 textarea {
@@ -49,10 +44,10 @@ textarea {
     color: @color-gray-light;
     opacity: 1;
 }
-/*** BUTTONS ***/
+
 [type='submit'], [type='reset'], [type='button'], button, .button {
-  width: 100%;
-  max-width: 350px;
+    width: 100%;
+    max-width: 350px;
     padding: 13px 13px 11px;
     display: inline-block;
     font: bold 18px/normal @font-heading;
@@ -70,20 +65,21 @@ textarea {
     user-select: none;
     appearance: none;
     cursor: pointer;
-    &:hover {
-        text-decoration: none;
-    }
     @media @tablet-sm {
-      width: auto;
-      max-width: none;
+        width: auto;
+        max-width: none;
         padding: 20px 24px 16px;
         font-size: 29px;
     }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
-/*** Selectric ***/
+
 .selectric {
-    background: @color-white;
     border: none;
+    background: @color-white;
 
     .label {
         margin-left: 0;
@@ -93,9 +89,9 @@ textarea {
         color: @color-gray-light;
         box-shadow: inset 3px 1px 2px 0 rgba(0, 0, 0, .54), 0 0 0 2px rgba(0,0,0,.34);
         @media @tablet-sm {
-          height: 60px;
-          font-size: 24px;
-          line-height: 60px;
+            height: 60px;
+            font-size: 24px;
+            line-height: 60px;
         }
     }
 
@@ -114,47 +110,47 @@ textarea {
         .selectric-hover & {
             color: @color-black;
             &:after {
-              border-top-color: @color-black;
+                border-top-color: @color-black;
             }
         }
         @media @tablet-sm {
-          width: 60px;
-          height: 60px;
-          &:after {
-            top: 22px;
-            border: 14px solid transparent;
-            border-top-color: @color-black;
-          }
+            width: 60px;
+            height: 60px;
+            &:after {
+                top: 22px;
+                border: 14px solid transparent;
+                border-top-color: @color-black;
+            }
         }
     }
 
-}
-.selectric-items {
-  background: @color-white;
-  border: none;
-  ul {
-    box-shadow: inset 0 0 0 2px rgba(0,0,0,.34);
-  }
-  li {
-    font-size: 16px;
-    color: @color-gray-light;
-    &:hover {
-      background: transparent;
-      color: @color-orange;
+    &-items {
+        background: @color-white;
+        border: none;
+        ul {
+            box-shadow: inset 0 0 0 2px rgba(0,0,0,.34);
+        }
+        li {
+            font-size: 16px;
+            color: @color-gray-light;
+            &:hover {
+                background: transparent;
+                color: @color-orange;
+            }
+            &.selected {
+                color: @color-white;
+                background: @color-orange;
+            }
+        }
+        @media @tablet-sm {
+            li {
+                font-size: 24px;
+                line-height: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
     }
-    &.selected {
-      color: @color-white;
-      background: @color-orange;
-    }
-  }
-  @media @tablet-sm {
-      li {
-        font-size: 24px;
-        line-height: 40px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-  }
 }
 /* ==========================================================================
    DEFAULT FORM
@@ -162,14 +158,15 @@ textarea {
 .form {
     &-group {
         margin-bottom: 14px;
+        @media @tablet-sm {
+            margin-bottom: 20px;
+        }
+
         &:after {
             .clearfix;
         }
         &:last-child {
             margin-bottom: 0;
-        }
-        @media @tablet-sm {
-          margin-bottom: 20px;
         }
     }
 }
