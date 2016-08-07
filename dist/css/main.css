@@ -970,7 +970,6 @@ button:focus,
 .components {
   padding: 90px 0;
   position: relative;
-  background: #58c8d5;
   color: #fff;
 }
 .components .heading {
@@ -979,11 +978,12 @@ button:focus,
   font: bold 21px/25px 'Co Text Corp', Arial, sans-serif;
   color: #000;
   text-transform: uppercase;
-  max-width: 60%;
-  margin: 0 auto 14px;
+  max-width: 200px;
+  margin: 0 auto 8px;
   text-transform: none;
   text-align: center;
   color: #fff;
+  line-height: 26px;
 }
 .components .heading + p {
   margin-top: 0;
@@ -1014,20 +1014,31 @@ button:focus,
   margin: 0 auto;
   position: relative;
 }
-.components .list:before {
+.components .list:before,
+.components .list:after {
   display: block;
   content: '\0020';
   overflow: hidden;
   width: 560px;
-  height: 560px;
+  height: 568px;
   margin: 0 0 0 -300px;
-  background: rgba(255, 255, 255, 0.15) url('../img/components/bg.png') center 85px no-repeat;
-  background-size: 64% auto;
   border-radius: 50%;
-  border: 16px solid #2087a4;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 50%;
+}
+.components .list:before {
+  background: -webkit-radial-gradient(center ellipse, #74dde7 0%, #62c4d4 100%);
+  background: radial-gradient(ellipse at center, #74dde7 0%, #62c4d4 100%);
+  border: 16px solid #2087a4;
+  z-index: 0;
+}
+.components .list:after {
+  margin-left: -280px;
+  background: url('../img/components/bg-s.png') center 62px no-repeat;
+  background-size: 320px auto;
+  z-index: 1;
 }
 .components .list .image {
   width: 72px;
@@ -1035,15 +1046,16 @@ button:focus,
   margin: 0 auto;
   display: block;
   position: absolute;
-  top: 106px;
+  top: 105px;
   left: 0;
-  right: 0;
+  right: 10px;
+  z-index: 2;
 }
 .components .list .image:before {
   display: block;
   content: '\0020';
   overflow: hidden;
-  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.74);
+  box-shadow: 0 0 35px 25px rgba(111, 227, 240, 0.74);
   position: absolute;
   top: 5px;
   bottom: 10px;
@@ -1068,34 +1080,15 @@ button:focus,
   font: bold 18px/22px 'Co Text Corp', Arial, sans-serif;
   text-align: center;
 }
-.components .list li {
-  width: 124px;
-  position: absolute;
-  z-index: 1;
-}
-.components .list li:nth-child(1) {
-  top: 300px;
-  left: 10px;
-}
-.components .list li:nth-child(2) {
-  top: 300px;
-  right: 0;
-}
-.components .list li:nth-child(3) {
-  top: 484px;
-  left: 16px;
-}
-.components .list li:nth-child(4) {
-  top: 484px;
-  right: -6px;
-}
 .components .list .pic {
-  width: 124px;
-  height: 124px;
+  width: 123px;
+  height: 123px;
   margin: 0 auto -6px;
   display: block;
-  background: url('../img/components/circle.png') 0 0 no-repeat;
-  background-size: cover;
+  background: url('../img/components/circle.jpg') center center no-repeat;
+  border: 9px solid #2087a4;
+  border-radius: 50%;
+  background-size: 103% 103%;
   position: relative;
   z-index: -1;
 }
@@ -1110,6 +1103,45 @@ button:focus,
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.components .list li {
+  width: 123px;
+  position: absolute;
+  z-index: 3;
+}
+.components .list li:nth-child(1) {
+  top: 302px;
+  left: 9px;
+}
+.components .list li:nth-child(1) .pic img {
+  margin: -86px 0 0 -74px;
+}
+.components .list li:nth-child(2) {
+  top: 300px;
+  right: 2px;
+}
+.components .list li:nth-child(2) .pic img {
+  margin: -86px 0 0 -84px;
+}
+.components .list li:nth-child(3) {
+  top: 484px;
+  left: 15px;
+}
+.components .list li:nth-child(3) .pic {
+  margin-bottom: -4px;
+}
+.components .list li:nth-child(3) .pic img {
+  margin: -83px 0 0 -80px;
+}
+.components .list li:nth-child(4) {
+  top: 484px;
+  right: -5px;
+}
+.components .list li:nth-child(4) .pic {
+  margin-bottom: 4px;
+}
+.components .list li:nth-child(4) .pic img {
+  margin: -71px 0 0 -95px;
 }
 /* ==========================================================================
    MEDIA QUERIES
@@ -1593,12 +1625,13 @@ button:focus,
     max-width: none;
     height: 600px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.35);
   }
   .components .list:before {
     width: auto;
     height: auto;
     margin: auto auto;
+    background: -webkit-radial-gradient(center ellipse, #58c8d5 0%, #58c8d5 40%, #2087a4 100%);
+    background: radial-gradient(ellipse at center, #58c8d5 0%, #58c8d5 40%, #2087a4 100%);
     top: 0;
     bottom: 0;
     left: 0;
@@ -1621,6 +1654,16 @@ button:focus,
     font-size: 25px;
     line-height: 30px;
   }
+  .components .list .pic {
+    width: 160px;
+    height: 160px;
+    margin-bottom: -4px;
+  }
+  .components .list .pic img {
+    width: 226px;
+    height: 226px;
+    margin: -113px 0 0 -113px;
+  }
   .components .list li {
     width: 180px;
   }
@@ -1639,16 +1682,6 @@ button:focus,
   .components .list li:nth-child(4) {
     top: 380px;
     right: -70px;
-  }
-  .components .list .pic {
-    width: 160px;
-    height: 160px;
-    margin-bottom: -4px;
-  }
-  .components .list .pic img {
-    width: 226px;
-    height: 226px;
-    margin: -113px 0 0 -113px;
   }
 }
 @media (min-width: 1170px) {
@@ -1932,6 +1965,10 @@ button:focus,
     max-width: 70%;
     margin-bottom: 40px;
   }
+  .components .bg {
+    top: -84px;
+    bottom: -84px;
+  }
   .components .list {
     width: 736px;
     height: 736px;
@@ -1944,6 +1981,15 @@ button:focus,
   .components .list ul {
     font-size: 30px;
     line-height: 36px;
+  }
+  .components .list .pic {
+    width: 194px;
+    height: 194px;
+  }
+  .components .list .pic img {
+    width: 276px;
+    height: 276px;
+    margin: -138px 0 0 -138px;
   }
   .components .list li {
     width: 220px;
@@ -1966,15 +2012,6 @@ button:focus,
   .components .list li:nth-child(4) {
     top: 470px;
     right: -84px;
-  }
-  .components .list .pic {
-    width: 194px;
-    height: 194px;
-  }
-  .components .list .pic img {
-    width: 276px;
-    height: 276px;
-    margin: -138px 0 0 -138px;
   }
 }
 
